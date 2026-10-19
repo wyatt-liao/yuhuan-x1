@@ -1,0 +1,32 @@
+{
+  "source": "https://www.jlc-3dp.cn/technicalColumnsDetails/27832.html",
+  "accessed": "2026-10-19",
+  "reviewed_sections": [
+    "wall thickness",
+    "assembly clearance",
+    "motion clearance",
+    "holes",
+    "columns",
+    "text",
+    "connected prints"
+  ],
+  "own_design_decisions": {
+    "shell_main_skin": 2.0,
+    "moving_button_radial_gap": 0.5,
+    "static_glue_joint_gap": 0.4,
+    "locator_lip_radial_gap": 0.5,
+    "button_flange": 1.6,
+    "optional_sprue_bar_section": [
+      1.7,
+      1.6
+    ],
+    "optional_sprue_bar_count": 2,
+    "optional_connected_functional_parts": 2
+  },
+  "exceptions": [
+    "M2 corner captive-nut pocket has local residual ligaments below 2 mm; external walls carry load. Supplier review and gentle tightening required.",
+    "PCB support pads are low, wide raised seats, not 1.5 mm tall pins.",
+    "Acoustic and LED apertures under 2 mm are for unpainted SLA; mask and chase after finishing.",
+    "No direct fine printed logo; apply supplied flat label."
+  ]
+}

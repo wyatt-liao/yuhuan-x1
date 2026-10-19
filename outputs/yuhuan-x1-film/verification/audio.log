@@ -1,0 +1,53 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'outputs/Voloop-X1-CG版-运镜修正.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Voloop X1 — 重要的，回头还在。
+    encoder         : Lavf61.7.100
+    comment         : Procedural product concept film; exterior concept and mobile AI vision, not measured hardware performance.
+  Duration: 00:00:35.00, start: 0.000000, bitrate: 2257 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2045 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 202 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Voloop X1 — 重要的，回头还在。
+    comment         : Procedural product concept film; exterior concept and mobile AI vision, not measured hardware performance.
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 pcm_s16le
+size=N/A time=00:00:05.90 bitrate=N/A speed=11.8x    
+size=N/A time=00:00:11.90 bitrate=N/A speed=11.9x    
+size=N/A time=00:00:17.90 bitrate=N/A speed=11.9x    
+size=N/A time=00:00:29.90 bitrate=N/A speed=14.9x    
+[Parsed_loudnorm_0 @ 0x138006be0] 
+{
+	"input_i" : "-15.78",
+	"input_tp" : "-1.22",
+	"input_lra" : "3.30",
+	"input_thresh" : "-26.11",
+	"output_i" : "-16.43",
+	"output_tp" : "-1.50",
+	"output_lra" : "2.70",
+	"output_thresh" : "-26.73",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.43"
+}
+[out#0/null @ 0x135605460] video:0KiB audio:26256KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:35.10 bitrate=N/A speed=16.5x    

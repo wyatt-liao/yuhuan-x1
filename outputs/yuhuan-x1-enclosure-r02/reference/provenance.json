@@ -1,0 +1,18 @@
+{
+  "source_project": "MeetCard-AI-repair-loop-20261018",
+  "project_uuid": "6e7fb6759eab460cbbc49ac9e7796a0d",
+  "document_uuid": "c513f79d0042e6d9",
+  "window": "93ebae2c-ace5-46f9-994f-d46088d9b7c3",
+  "source_kind": "EasyEDA native readback",
+  "board_modified_by_enclosure_task": false,
+  "units": "mm after mil coordinate conversion",
+  "known_assumptions": [
+    "PCB thickness 1.6 mm",
+    "battery maximum thickness 5.2 mm; not measured",
+    "component height envelopes; no supplier 3D geometry",
+    "switch free height 1.5 mm"
+  ],
+  "RF_reference": "Espressif ESP32-S3 Hardware Design Guidelines, accessed 2026-10-18",
+  "RF_reference_url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html",
+  "rf_proxy_source": "native antenna keepout; not certified antenna geometry"
+}

@@ -1,0 +1,10 @@
+test_late_request_and_json_error_offset (test_phone_demo.FramingTests) ... ok
+test_split_resume_and_crc (test_phone_demo.FramingTests) ... ok
+test_sync_resume_and_ack (test_phone_demo.FramingTests) ... saved 0000000000000001.wav 316 bytes
+pending 0000000000000001 invalid read response
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK

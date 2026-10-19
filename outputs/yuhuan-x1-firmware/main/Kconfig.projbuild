@@ -1,0 +1,21 @@
+menu "Yuhuan X1"
+config YH_BUTTON2_GPIO
+    int "Second function button GPIO (-1 disables)"
+    range -1 48
+    default 15
+    help
+        Revised PCB: SW2 is isolated from EN and connects to GPIO15.
+        Original PCB requires -1. Verify PCB revision before flashing.
+config YH_SD_SPI_MHZ
+    int "SD SPI clock MHz (start conservatively for first board)"
+    range 4 20
+    default 10
+config YH_LOW_BATTERY_MV
+    int "Low-battery shutdown threshold at battery connector, mV"
+    range 3000 3600
+    default 3300
+config YH_WIFI_IDLE_SECONDS
+    int "Turn Wi-Fi off after this many seconds without application traffic"
+    range 30 3600
+    default 120
+endmenu

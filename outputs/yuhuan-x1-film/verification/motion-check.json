@@ -1,0 +1,10 @@
+{
+  "timelineSeconds": 35,
+  "sampledFrames": 2101,
+  "deterministicSeek": true,
+  "continuous": "C2 quintic Hermite",
+  "unwrappedRotation": true,
+  "maxVelocityMismatch": 2.7000623958883804e-8,
+  "maxAccelerationMismatch": 0.01612932010175427,
+  "finiteValues": true
+}

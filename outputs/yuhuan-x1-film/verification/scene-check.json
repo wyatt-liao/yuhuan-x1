@@ -1,0 +1,13 @@
+{
+  "frames": 1050,
+  "fps": 30,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "maxCameraRotationDegreesPerFrame": 1.8912794748054493,
+  "minimumCameraUpDotWorldY": 0.8775579333305359,
+  "switchCenterPitchMm": 8.889999287179375,
+  "packedTextures": true,
+  "letteringAsGeometry": true
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.yuhuan.x1.ProtocolTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-18T13:17:22.839Z" hostname="WyattdeMacBook-Pro.local" time="0.207">
+  <properties/>
+  <testcase name="highUnsignedIdsAndPausedRangesDoNotLosePrecision" classname="com.yuhuan.x1.ProtocolTest" time="0.023"/>
+  <testcase name="jsonErrorStartsAtZeroEvenDuringFileRead" classname="com.yuhuan.x1.ProtocolTest" time="0.002"/>
+  <testcase name="lanRejectsPublicHostsAndLoopback" classname="com.yuhuan.x1.ProtocolTest" time="0.015"/>
+  <testcase name="resumedTransferAcknowledgesOnlyAfterValidAtomicCommit" classname="com.yuhuan.x1.ProtocolTest" time="0.144"/>
+  <testcase name="requestIdsCrcAndOffsetsAreVerified" classname="com.yuhuan.x1.ProtocolTest" time="0.007"/>
+  <testcase name="firmwareAudioDecodesLikeIndependentFfmpegAndCropsPrecisely" classname="com.yuhuan.x1.ProtocolTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

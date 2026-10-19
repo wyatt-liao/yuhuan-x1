@@ -1,0 +1,8 @@
+PASS button start/stop/pause/resume, click bursts, 24h cap, voice hysteresis
+PASS rolling retention, protected overlap, exact-size ACK, read validation, restart persistence
+PASS manual pause excludes paused span while background recording continues
+PASS in-flight transfer lease prevents rolling deletion
+PASS power-loss partial-file repair truncates incomplete ADPCM block
+PASS corrupt protection metadata disables deletion instead of losing saved recordings
+ALL CORE TESTS PASSED
+PASS independent FFmpeg WAV decoding, 440Hz tone SNR 36.6 dB

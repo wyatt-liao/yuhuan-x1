@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&amp;family=Roboto+Flex:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#93000d", "on-tertiary": "#ffffff", "on-primary-fixed": "#00201d", "on-surface": "#181c1c", "inverse-primary": "#8cd3cb", "on-tertiary-fixed": "#410002", "secondary-fixed-dim": "#b8cac9", "on-secondary-fixed": "#0e1e1e", "tertiary-fixed": "#ffdad6", "surface-container-high": "#e5e9e8", "surface": "#f6fafa", "on-secondary-fixed-variant": "#3a4a49", "secondary-container": "#d4e6e5", "on-surface-variant": "#3f4947", "outline": "#6f7977", "surface-tint": "#1c6963", "on-primary": "#ffffff", "on-primary-container": "#95dcd4", "on-error": "#ffffff", "on-secondary-container": "#576867", "surface-container-lowest": "#ffffff", "tertiary-container": "#b20d17", "error": "#ba1a1a", "primary": "#004a45", "tertiary-fixed-dim": "#ffb4ac", "surface-container-low": "#f0f4f4", "secondary-fixed": "#d4e6e5", "tertiary": "#88000b", "on-background": "#181c1c", "inverse-surface": "#2c3131", "error-container": "#ffdad6", "surface-container-highest": "#dfe3e3", "on-error-container": "#93000a", "on-secondary": "#ffffff", "surface-bright": "#f6fafa", "primary-container": "#12635d", "secondary": "#516161", "background": "#f6fafa", "on-tertiary-container": "#ffc0b9", "outline-variant": "#bec9c6", "primary-fixed": "#a8f0e7", "surface-dim": "#d6dbda", "primary-fixed-dim": "#8cd3cb", "on-primary-fixed-variant": "#00504b", "inverse-on-surface": "#edf2f1", "surface-variant": "#dfe3e3", "surface-container": "#eaefee" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "space-lg": "1rem", "gutter": "1rem", "space-sm": "0.5rem", "margin": "1rem" }, "fontFamily": { "display-lg": ["Manrope"], "body-sm": ["Roboto Flex"], "label-lg": ["Roboto Flex"], "headline-sm": ["Manrope"], "label-sm": ["Roboto Flex"], "label-md": ["Roboto Flex"], "body-md": ["Roboto Flex"], "headline-lg": ["Manrope"], "body-lg": ["Roboto Flex"], "headline-md": ["Manrope"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="flex items-center justify-between px-space-lg h-7 select-none text-on-surface-variant font-label-sm text-label-sm"><span class="font-label-md text-label-md font-semibold text-on-surface tracking-tight">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">bluetooth_connected</span><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[16px]">battery_charging_full</span></div></div><div class="h-14 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs py-1 px-space-sm bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide uppercase">语环 X1</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Today</h1></div><div class="flex items-center gap-space-xs"><button aria-label="搜索" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-[84px] pb-[88px] bg-surface"><div class="flex flex-col w-full pb-36">
+<!-- Top Daily Header & Gentle Greeting -->
+<section class="px-gutter pt-space-md pb-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary tracking-wide">10月24日 星期四</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-primary-container">BLE 5.3 正常</span>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<h2 class="font-headline-md text-headline-md text-on-surface">下午好，语环正在安静记录</h2>
+</div>
+</section>
+<!-- Hardware Status Card: Pill Instrument Panel -->
+<section class="px-gutter my-space-xs">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-primary">已连接 · 持续记录中</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">刚刚同步 (14:32)</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">battery_full</span>
+<span class="text-on-surface font-medium">电量 78%</span>
+</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">sync</span>
+<span>本地循环存储中</span>
+</span>
+</div>
+<span class="text-secondary font-label-sm text-label-sm text-right">保持轻度低功耗连接</span>
+</div>
+</div>
+</section>
+<!-- Notice Disclaimer -->
+<div class="px-gutter pt-1 pb-space-xs flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>示意波形反映设备本地声响密度，非手机实时拾音</span>
+</div>
+<!-- Main Timeline Instrument Area -->
+<section class="px-gutter mt-space-xs flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<!-- Timeline Header & Inspection Tools -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">timeline</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">24小时音频时间轴</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary font-mono">00:00 - 15:40</span>
+</div>
+<!-- Time Ruler Visual -->
+<div class="w-full flex flex-col pt-1 select-none">
+<div class="flex justify-between text-secondary font-label-sm text-label-sm font-mono px-0.5">
+<span>00:00</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span class="text-primary font-bold">15:40 现</span>
+</div>
+<!-- 24H Micro ticks SVG -->
+<svg class="w-full h-3 mt-1 text-outline-variant" preserveaspectratio="none" viewbox="0 0 320 12">
+<line stroke="currentColor" stroke-width="1" x1="0" x2="320" y1="0" y2="0"></line>
+<!-- Major & Minor Ticks -->
+<line stroke="currentColor" stroke-width="1.5" x1="0" x2="0" y1="0" y2="8"></line>
+<line stroke="currentColor" stroke-width="1" x1="40" x2="40" y1="0" y2="4"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="80" x2="80" y1="0" y2="8"></line>
+<line stroke="currentColor" stroke-width="1" x1="120" x2="120" y1="0" y2="4"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="160" x2="160" y1="0" y2="8"></line>
+<line stroke="currentColor" stroke-width="1" x1="200" x2="200" y1="0" y2="4"></line>
+<line stroke="currentColor" stroke-width="1.5" x1="240" x2="240" y1="0" y2="8"></line>
+<line stroke="currentColor" stroke-width="1" x1="280" x2="280" y1="0" y2="4"></line>
+<line stroke="#004a45" stroke-width="2" x1="310" x2="310" y1="0" y2="10"></line>
+</svg>
+</div>
+<!-- Waveform & Activity Multi-track Canvas -->
+<div class="relative w-full h-28 bg-surface-container-low rounded-lg mt-2 overflow-hidden flex items-end px-1 cursor-pointer select-none">
+<!-- Loop background region (continuous cyclic audio stream) -->
+<div class="absolute inset-0 flex items-end justify-between px-1 opacity-60">
+<!-- 60 sample bars representing ambient sound density -->
+<div class="w-1 h-3 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-2 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-2 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-4 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-2 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-3 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-5 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-7 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-6 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-12 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-14 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-18 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-20 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-16 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-8 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-10 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-14 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-16 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-22 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-18 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-12 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-15 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-11 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-7 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-8 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-6 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-14 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-18 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-24 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-20 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-15 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-10 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-12 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-16 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-19 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-14 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-8 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-5 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-16 bg-secondary-fixed-dim rounded-t-sm"></div>
+<div class="w-1 h-22 bg-secondary-fixed-dim rounded-t-sm"></div>
+</div>
+<!-- Segment 1: Saved Block (09:30 - 10:45) -->
+<div class="absolute left-[38%] w-[16%] h-full bg-primary-container/20 rounded-md flex flex-col justify-between p-1 z-10">
+<div class="flex items-center gap-0.5 bg-primary-container text-on-primary rounded px-1 py-0.5 w-max">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="text-[9px] font-semibold leading-none">定存</span>
+</div>
+<div class="w-full flex items-end justify-between gap-0.5 h-16">
+<div class="flex-1 h-10 bg-primary-container rounded-t-sm"></div>
+<div class="flex-1 h-16 bg-primary-container rounded-t-sm"></div>
+<div class="flex-1 h-14 bg-primary-container rounded-t-sm"></div>
+<div class="flex-1 h-12 bg-primary-container rounded-t-sm"></div>
+</div>
+</div>
+<!-- Segment 2: Manual Recording Block with Hatching (13:10 - 13:40) -->
+<div class="absolute left-[62%] w-[12%] h-full bg-primary-fixed/30 rounded-md flex flex-col justify-between p-1 z-10 overflow-hidden">
+<div class="absolute inset-0 opacity-15 bg-[repeating-linear-gradient(45deg,#004a45,#004a45_4px,transparent_4px,transparent_8px)]"></div>
+<div class="flex items-center gap-0.5 bg-surface-container-lowest text-primary rounded px-1 py-0.5 w-max relative z-10 shadow-xs">
+<span class="material-symbols-outlined text-[10px]">mic</span>
+<span class="text-[9px] font-bold leading-none">手动</span>
+</div>
+<div class="w-full flex items-end justify-between gap-0.5 h-16 relative z-10">
+<div class="flex-1 h-8 bg-primary rounded-t-sm"></div>
+<div class="flex-1 h-13 bg-primary rounded-t-sm"></div>
+<div class="flex-1 h-15 bg-primary rounded-t-sm"></div>
+</div>
+</div>
+<!-- Current Head Playhead Line -->
+<div class="absolute right-[3%] top-0 bottom-0 w-0.5 bg-primary z-20 flex flex-col items-center">
+<div class="w-2.5 h-2.5 -top-1 absolute bg-primary rounded-full shadow-sm"></div>
+</div>
+</div>
+<!-- Auxiliary Jump & Navigation Buttons -->
+<div class="flex items-center justify-between pt-space-sm mt-1">
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">skip_previous</span>
+<span class="font-label-sm text-label-sm">前一片段</span>
+</button>
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-full bg-secondary-container text-primary-container font-medium hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+<span class="font-label-sm text-label-sm">定位到最近事件</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="font-label-sm text-label-sm">后一片段</span>
+<span class="material-symbols-outlined text-[16px]">skip_next</span>
+</button>
+</div>
+<!-- Segment Types Legend & Storage Status Notes -->
+<div class="pt-space-md mt-1 flex flex-col gap-2">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">区间图例说明</span>
+<span class="text-[11px]">滚动保留 · 24小时后未存覆盖</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate">已保存区段</span>
+<span class="text-[10px] text-secondary">独立归档永不自动覆盖</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[16px]">radio_button_checked</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate">手动录音区段</span>
+<span class="text-[10px] text-secondary">含手录标记与独立标记</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Segment Cards List -->
+<section class="px-gutter mt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">今日重要区段</h3>
+<span class="font-label-sm text-label-sm text-secondary">共 2 个标记片段</span>
+</div>
+<!-- Card 1: Saved Segment -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">上午团队周会</h4>
+<span class="font-label-sm text-label-sm text-secondary font-mono">09:30 - 10:45 · 1小时15分</span>
+</div>
+</div>
+<!-- Storage Badge -->
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">phone_android</span>
+<span>已在手机</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 pl-10">
+        讨论 Q4 语环固件 V2.4 音频降噪算法部署，硬件能耗评测指标已定，待测试组提交能耗曲线。
+      </p>
+</div>
+<!-- Card 2: Manual Recording with Sync In-Progress -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">设计访谈</h4>
+<span class="font-label-sm text-label-sm text-secondary font-mono">13:10 - 13:40 · 30分钟</span>
+</div>
+</div>
+<!-- Storage Badge (Syncing) -->
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] animate-spin">sync</span>
+<span class="font-medium">同步中 (68%)</span>
+</span>
+</div>
+<div class="pl-10 flex flex-col gap-1.5">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 68%;"></div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>文件大小: 18.4 MB</span>
+<span>蓝牙传输耗时约 45秒</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Operational Action Bar -->
+<aside class="fixed bottom-16 inset-x-0 z-40 px-gutter pb-space-sm pt-space-xs bg-surface/90 backdrop-blur-md">
+<div class="max-w-md mx-auto flex flex-col gap-space-xs">
+<!-- Retrospective Save Pair: Primary Action -->
+<div class="grid grid-cols-5 gap-2">
+<button class="col-span-3 h-12 rounded-xl bg-primary text-on-primary px-space-md flex items-center justify-between shadow-sm active:scale-[0.99] transition-transform">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[20px] shrink-0">history</span>
+<div class="flex flex-col text-left truncate">
+<span class="font-label-md text-label-md font-semibold leading-tight truncate">保存过去 1 小时</span>
+<span class="text-[10px] opacity-80 font-mono leading-tight">留存 14:40 - 15:40</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] shrink-0">arrow_forward</span>
+</button>
+<button class="col-span-2 h-12 rounded-xl bg-secondary-container text-primary-container px-space-sm flex items-center justify-center gap-1 shadow-sm hover:bg-secondary-fixed transition-colors" id="durationModalBtn">
+<span class="material-symbols-outlined text-[18px]">more_time</span>
+<span class="font-label-md text-label-md font-semibold">选择时长...</span>
+</button>
+</div>
+<!-- Manual Standalone Recording Controller -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col gap-1.5">
+<!-- Recording State Toggle Panel -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-error"></span>
+</span>
+<span class="font-label-md text-label-md font-mono font-semibold text-on-surface">00:18:24</span>
+<span class="font-label-sm text-label-sm text-secondary">· 手动录音中</span>
+</div>
+<!-- Controls -->
+<div class="flex items-center gap-1.5">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[15px]">pause</span>
+<span>暂停</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-error text-on-error font-label-sm text-label-sm font-medium flex items-center gap-1 shadow-xs active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[15px]">stop</span>
+<span>结束保存</span>
+</button>
+</div>
+</div>
+<!-- Strict Technical Notice -->
+<div class="text-[11px] text-secondary px-0.5 leading-tight flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] shrink-0">lock_clock</span>
+<span>注：手动录音暂停期间，后台循环记录仍会安全继续</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Duration Selector Bottom Sheet / Popover (Hidden by default, interactive via script) -->
+<div class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-end justify-center p-gutter" id="durationSheet">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">选择回溯保存时长</h4>
+<span class="font-label-sm text-label-sm text-secondary">将对应历史声响固化为独立文件</span>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container" id="closeSheetBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="p-3 rounded-xl bg-surface-container-low hover:bg-secondary-container hover:text-primary-container text-left flex flex-col gap-1 transition-colors">
+<span class="font-headline-sm text-headline-sm">30分钟</span>
+<span class="text-[10px] text-secondary font-mono">15:10 - 15:40</span>
+</button>
+<button class="p-3 rounded-xl bg-secondary-container text-primary-container text-left flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm font-semibold">1小时</span>
+<span class="text-[10px] font-mono">14:40 - 15:40</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container-low hover:bg-secondary-container hover:text-primary-container text-left flex flex-col gap-1 transition-colors">
+<span class="font-headline-sm text-headline-sm">2小时</span>
+<span class="text-[10px] text-secondary font-mono">13:40 - 15:40</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container-low hover:bg-secondary-container hover:text-primary-container text-left flex flex-col gap-1 transition-colors">
+<span class="font-headline-sm text-headline-sm">4小时</span>
+<span class="text-[10px] text-secondary font-mono">11:40 - 15:40</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container-low hover:bg-secondary-container hover:text-primary-container text-left flex flex-col gap-1 transition-colors">
+<span class="font-headline-sm text-headline-sm">8小时</span>
+<span class="text-[10px] text-secondary font-mono">07:40 - 15:40</span>
+</button>
+<button class="p-3 rounded-xl bg-surface-container-low hover:bg-secondary-container hover:text-primary-container text-left flex flex-col gap-1 transition-colors">
+<span class="font-headline-sm text-headline-sm">整天24h</span>
+<span class="text-[10px] text-secondary font-mono">滚动全量留存</span>
+</button>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-sm" id="confirmSaveDuration">
+<span>确认留存选定时段</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const modalBtn = document.getElementById('durationModalBtn');
+    const sheet = document.getElementById('durationSheet');
+    const closeBtn = document.getElementById('closeSheetBtn');
+    const confirmBtn = document.getElementById('confirmSaveDuration');
+
+    if (modalBtn && sheet && closeBtn && confirmBtn) {
+      modalBtn.addEventListener('click', () => {
+        sheet.classList.remove('hidden');
+      });
+      closeBtn.addEventListener('click', () => {
+        sheet.classList.add('hidden');
+      });
+      confirmBtn.addEventListener('click', () => {
+        sheet.classList.add('hidden');
+      });
+      sheet.addEventListener('click', (e) => {
+        if (e.target === sheet) {
+          sheet.classList.add('hidden');
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary-container [&amp;&gt;div]:bg-secondary-container [&amp;&gt;div]:text-primary-container [&amp;&gt;span]:font-semibold"><div class="flex items-center justify-around h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] min-h-[48px] transition-colors text-primary-container [&amp;&gt;div]:bg-secondary-container [&amp;&gt;div]:text-primary-container [&amp;&gt;span]:font-semibold" data-path="today" href="#"><div class="w-14 h-8 flex items-center justify-center rounded-full transition-colors"><span class="material-symbols-outlined text-[22px]">calendar_today</span></div><span class="font-label-sm text-label-sm mt-0.5">今天</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="recordings" href="#"><div class="w-14 h-8 flex items-center justify-center rounded-full transition-colors"><span class="material-symbols-outlined text-[22px]">graphic_eq</span></div><span class="font-label-sm text-label-sm mt-0.5">录音</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="assistant" href="#"><div class="w-14 h-8 flex items-center justify-center rounded-full transition-colors"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="font-label-sm text-label-sm mt-0.5">助手</span></a><a class="flex flex-col items-center justify-center min-w-[64px] min-h-[48px] text-secondary hover:text-on-surface transition-colors" data-path="device" href="#"><div class="w-14 h-8 flex items-center justify-center rounded-full transition-colors"><span class="material-symbols-outlined text-[22px]">contactless</span></div><span class="font-label-sm text-label-sm mt-0.5">设备</span></a></div></nav></body></html>

@@ -1,0 +1,14 @@
+{
+  "preview": "cinema.html?t=8.8",
+  "videoWidth": 1920,
+  "videoHeight": 1080,
+  "durationSeconds": 35,
+  "readyState": 4,
+  "startTime": 8.8,
+  "metadataInitialization": "passed including cached video",
+  "source": "assets/film-cg.mp4?v=motion2",
+  "browserError": null,
+  "pausedSeekAt11_9Seconds": "passed",
+  "playback": "observed playback from 8.8 seconds; no media error",
+  "screenshot": "Voloop-X1-运镜修正预览.png"
+}

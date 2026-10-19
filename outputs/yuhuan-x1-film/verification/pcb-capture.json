@@ -1,0 +1,110 @@
+{
+  "availability": {
+    "components": "available",
+    "copper": "not-requested",
+    "layers": "not-requested",
+    "outline": "available",
+    "routedLines": "available",
+    "rules": "not-requested",
+    "silk": "not-requested"
+  },
+  "bytes": 202804,
+  "capture": {
+    "windowId": "c799967d-08c5-4d65-972a-d1d0beccac79",
+    "projectUuid": "6e7fb6759eab460cbbc49ac9e7796a0d",
+    "projectName": "MeetCard-AI-repair-loop-20261018",
+    "documentUuid": "c513f79d0042e6d9",
+    "documentType": "pcb",
+    "tabId": "c513f79d0042e6d9@6e7fb6759eab460cbbc49ac9e7796a0d",
+    "startedAt": "2026-10-18T09:10:14.483762Z",
+    "completedAt": "2026-10-18T09:10:14.709032Z",
+    "consistency": "sequential-response-boundaries",
+    "identityVerified": true,
+    "requests": [
+      {
+        "action": "pcb.components.list",
+        "requestId": "req_636",
+        "windowId": "c799967d-08c5-4d65-972a-d1d0beccac79",
+        "startedAt": "2026-10-18T09:10:14.483985Z",
+        "completedAt": "2026-10-18T09:10:14.644659Z",
+        "responseCreatedAt": "2026-10-18T09:10:14.574492Z",
+        "resultSha256": "06e736a75041b8d67bbf0a25dccc1f7b5f2e1ba346bf8c1b063604e9363fde7f",
+        "context": {
+          "projectUuid": "6e7fb6759eab460cbbc49ac9e7796a0d",
+          "projectName": "MeetCard-AI-repair-loop-20261018",
+          "documentUuid": "c513f79d0042e6d9",
+          "documentType": "pcb",
+          "tabId": "c513f79d0042e6d9@6e7fb6759eab460cbbc49ac9e7796a0d"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 4692,
+          "SeqAbandoned": 1,
+          "Unordered": false,
+          "AbandonedIDs": [
+            "req_1108"
+          ]
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.outline.get",
+        "requestId": "req_637",
+        "windowId": "c799967d-08c5-4d65-972a-d1d0beccac79",
+        "startedAt": "2026-10-18T09:10:14.647641Z",
+        "completedAt": "2026-10-18T09:10:14.672473Z",
+        "responseCreatedAt": "2026-10-18T09:10:14.670913Z",
+        "resultSha256": "45f717d1b499b3c3a48a5c7d1775ccadb82c23fad3f72c8b197e0cecd013b00f",
+        "context": {
+          "projectUuid": "6e7fb6759eab460cbbc49ac9e7796a0d",
+          "projectName": "MeetCard-AI-repair-loop-20261018",
+          "documentUuid": "c513f79d0042e6d9",
+          "documentType": "pcb",
+          "tabId": "c513f79d0042e6d9@6e7fb6759eab460cbbc49ac9e7796a0d"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 4693,
+          "SeqAbandoned": 1,
+          "Unordered": false,
+          "AbandonedIDs": [
+            "req_1108"
+          ]
+        },
+        "status": "available"
+      },
+      {
+        "action": "pcb.line.list",
+        "requestId": "req_638",
+        "windowId": "c799967d-08c5-4d65-972a-d1d0beccac79",
+        "startedAt": "2026-10-18T09:10:14.672582Z",
+        "completedAt": "2026-10-18T09:10:14.709032Z",
+        "responseCreatedAt": "2026-10-18T09:10:14.692634Z",
+        "resultSha256": "5131be4978341f6c2a3f674e52ff703dca492405b2a3ce77ba50a6ecf05d7f20",
+        "context": {
+          "projectUuid": "6e7fb6759eab460cbbc49ac9e7796a0d",
+          "projectName": "MeetCard-AI-repair-loop-20261018",
+          "documentUuid": "c513f79d0042e6d9",
+          "documentType": "pcb",
+          "tabId": "c513f79d0042e6d9@6e7fb6759eab460cbbc49ac9e7796a0d"
+        },
+        "sequence": {
+          "Known": true,
+          "Seq": 4694,
+          "SeqAbandoned": 1,
+          "Unordered": false,
+          "AbandonedIDs": [
+            "req_1108"
+          ]
+        },
+        "status": "available"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-18T09:10:14.483762Z",
+  "kind": "pcb-dump-file",
+  "partial": null,
+  "sha256": "2b1d901d4f9f42bbfa550f9e3ea31110bddef3a9384f0c5d822a39f937bd8168",
+  "snapshot": "pcb-reference.json",
+  "version": 1
+}

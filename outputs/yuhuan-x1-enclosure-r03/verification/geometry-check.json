@@ -1,0 +1,440 @@
+{
+  "revision": "R03",
+  "units": "mm",
+  "status": "SLA optimized prototype; supplier review and physical fit still required",
+  "case_body_mm": [
+    110.79979999999999,
+    84.841,
+    9.8
+  ],
+  "maximum_height_with_buttons_mm": 10.15,
+  "pcb_mm": [
+    99.9998,
+    74.041,
+    1.6
+  ],
+  "pcb_z": [
+    2.25,
+    3.85
+  ],
+  "slot": {
+    "x": 17.8308,
+    "y": 6.5278,
+    "length": 41.91,
+    "width": 61.976
+  },
+  "battery_measured": false,
+  "battery_nominal_xyz": [
+    40.0,
+    60.0,
+    5.0
+  ],
+  "battery_assumed_fit_envelope_xyz": [
+    41.41,
+    61.476,
+    5.2
+  ],
+  "slot_nominal_clearance_per_side_xy": [
+    0.9549999999999983,
+    0.9879999999999995
+  ],
+  "ceiling_z": 7.800000000000001,
+  "battery_max_to_ceiling_mm": 0.40000000000000036,
+  "screws": [
+    [
+      -1.5,
+      -1.5
+    ],
+    [
+      101.4998,
+      -1.5
+    ],
+    [
+      101.4998,
+      75.541
+    ],
+    [
+      -1.5,
+      75.541
+    ]
+  ],
+  "microphone_ports": [
+    {
+      "name": "MIC1",
+      "x": 95.760794,
+      "y": 57.581927,
+      "pcb_hole_diameter": 0.7
+    },
+    {
+      "name": "MIC2",
+      "x": 95.760794,
+      "y": 10.718927000000003,
+      "pcb_hole_diameter": 0.7
+    },
+    {
+      "name": "MIC3",
+      "x": 1.7807940000000002,
+      "y": 57.581927,
+      "pcb_hole_diameter": 0.7
+    },
+    {
+      "name": "MIC4",
+      "x": 1.7807940000000002,
+      "y": 10.718927000000003,
+      "pcb_hole_diameter": 0.7
+    }
+  ],
+  "buttons": [
+    {
+      "switch": "SW1",
+      "name": "record",
+      "x": 71.1708,
+      "y": 68.5038,
+      "stem_bottom": 5.55,
+      "actuator_top": 5.35,
+      "free_gap": 0.2
+    },
+    {
+      "switch": "SW2",
+      "name": "recall",
+      "x": 80.0608,
+      "y": 68.5038,
+      "stem_bottom": 5.55,
+      "actuator_top": 5.35,
+      "free_gap": 0.2
+    }
+  ],
+  "hybrid": {
+    "boundary_x": 56.0,
+    "boundary_y": 35.0,
+    "inner_corner_radius": 8.0,
+    "joint_gap": 0.4,
+    "vertical_key_centers_y": [
+      47.5,
+      61.0
+    ],
+    "horizontal_key_centers_x": [
+      77.0,
+      94.0
+    ],
+    "antenna_proxy": {
+      "x0": 73.8628,
+      "y0": 53.015,
+      "x1": 93.8788,
+      "y1": 60.134
+    },
+    "rf_corner_fastener_material": "nonmetal M2 nylon screw AND nut",
+    "prototype_material": "All shell pieces SLA resin; metal-named pieces indicate future aluminum intent only.",
+    "exposed_keys": true
+  },
+  "antenna_proxy_to_intended_metal_distances_mm": {
+    "base_metal": 18.1572917540034,
+    "lid_metal": 18.071171623334216,
+    "M2x8_unthreaded_reference_0": 91.1180529163261,
+    "M2_nut_unthreaded_reference_0": 90.91627879926564,
+    "M2x8_unthreaded_reference_1": 53.15360686505606,
+    "M2_nut_unthreaded_reference_1": 52.92202522322211,
+    "M2x8_unthreaded_reference_3": 75.02758041616039,
+    "M2_nut_unthreaded_reference_3": 74.66777915030191
+  },
+  "antenna_proxy_note": "Native PCB keepout rectangle is a conservative location proxy, not a verified antenna radiation model. Final radio testing is required.",
+  "joining": "Visible flush bulb keys; 0.40 mm lateral adhesive gap. Bond each shell half separately; four M2x8 screws close the case.",
+  "minimum_adhesive_joint_distances_mm": {
+    "base": 0.3999999999999877,
+    "lid": 0.3999999999999877
+  },
+  "hardware_rf_corner": "Top-right corner requires nonmetal M2x8 screw AND nut.",
+  "jlc_guide": {
+    "url": "https://www.jlc-3dp.cn/technicalColumnsDetails/27832.html",
+    "checked": "2026-10-19",
+    "main_skin_mm": 2.0,
+    "motion_clearance_per_side_mm": 0.5,
+    "adhesive_gap_mm": 0.4,
+    "sprue_connecting_bar_section_mm": [
+      1.7,
+      1.6
+    ],
+    "button_flange_thickness_mm": 1.6,
+    "exceptions": [
+      "M2 corner captive-nut pocket has local residual ligaments below 2 mm; external walls carry load. Supplier review and gentle tightening required.",
+      "PCB support pads are low, wide raised seats, not 1.5 mm tall pins.",
+      "Acoustic and LED apertures under 2 mm are for unpainted SLA; mask and chase after finishing.",
+      "No direct fine printed logo; apply supplied flat label."
+    ]
+  },
+  "printed_parts": {
+    "base_metal": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 17261.713745244728,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "base_rf_plastic": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 5503.924010788556,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "lid_metal": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 14573.567015711236,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "lid_rf_plastic": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 4599.273341508321,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "button_record": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 111.69618520573138,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "button_recall": {
+      "brep_valid": true,
+      "solids": 1,
+      "volume_mm3": 110.74468064436932,
+      "pcb_interference_mm3": 0,
+      "battery_envelope_interference_mm3": 0
+    },
+    "component_envelopes": {
+      "tested": 50,
+      "shell_collisions": [],
+      "status": "assumed height envelopes; not actual component STEP geometry"
+    }
+  },
+  "mesh_exports": {
+    "base_metal": {
+      "triangles": 12900,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 17261.6688,
+      "bbox_mm": {
+        "min": [
+          0.0,
+          2.842170943040401e-14,
+          0.0
+        ],
+        "max": [
+          110.79979705810547,
+          84.84100341796875,
+          7.800000190734863
+        ]
+      },
+      "bytes": 645084,
+      "sha256": "9750e66ab1d11ccd5ac2ccc3f3d92a62f839e7c7d89b456f5f580a16537de30a"
+    },
+    "base_rf_plastic": {
+      "triangles": 6444,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 5503.8555,
+      "bbox_mm": {
+        "min": [
+          0.0003159395419061184,
+          0.0003159395419061184,
+          0.0
+        ],
+        "max": [
+          52.49980163574219,
+          47.54100036621094,
+          7.800000190734863
+        ]
+      },
+      "bytes": 322284,
+      "sha256": "702a83bcef00e43b1c4fe656861df6f81f1c24582860b27a553045b185043b30"
+    },
+    "lid_metal": {
+      "triangles": 11652,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 14573.5922,
+      "bbox_mm": {
+        "min": [
+          0.0,
+          0.0,
+          -5.506661775262693e-16
+        ],
+        "max": [
+          110.79979705810547,
+          84.84100341796875,
+          5.849999904632568
+        ]
+      },
+      "bytes": 582684,
+      "sha256": "9c35703c00cc0167bc2cbb49da168fa89206ef334eb6451beb5c087a6a39e96f"
+    },
+    "lid_rf_plastic": {
+      "triangles": 7744,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 4599.2511,
+      "bbox_mm": {
+        "min": [
+          0.0003159395419061184,
+          0.0,
+          -1.9590479759584918e-16
+        ],
+        "max": [
+          52.49980163574219,
+          47.54068374633789,
+          5.849999904632568
+        ]
+      },
+      "bytes": 387284,
+      "sha256": "d42085255e2b345ad35d21304e08886055a4d22de623439215acdeacd33d9765"
+    },
+    "button_record": {
+      "triangles": 2524,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 111.6667,
+      "bbox_mm": {
+        "min": [
+          -5.773159728050814e-15,
+          0.0007116128108464181,
+          0.0
+        ],
+        "max": [
+          7.199999809265137,
+          7.199288368225098,
+          4.599999904632568
+        ]
+      },
+      "bytes": 126284,
+      "sha256": "33bd697bc41e1ea0598bf718a58c77b5a38f125109bf73e2f3163407ebd552dd"
+    },
+    "button_recall": {
+      "triangles": 1924,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 110.7148,
+      "bbox_mm": {
+        "min": [
+          -5.773159728050814e-15,
+          0.0007116128108464181,
+          0.0
+        ],
+        "max": [
+          7.199999809265137,
+          7.199288368225098,
+          4.599999904632568
+        ]
+      },
+      "bytes": 96284,
+      "sha256": "7c720a4d56b910330d36a7f46842e2cc41e837d318a053e30706dc29a9835dbf"
+    },
+    "buttons_on_sprue_optional": {
+      "triangles": 4396,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 334.5037,
+      "bbox_mm": {
+        "min": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          24.0,
+          13.600000381469727,
+          4.599999904632568
+        ]
+      },
+      "bytes": 219884,
+      "sha256": "98a5e8f8a1d34a770236c1c8d7c403e334dcba1f04566a2b7c59bf2f17e52c80"
+    },
+    "fit_coupon": {
+      "triangles": 3304,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 4772.0595,
+      "bbox_mm": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          64.0,
+          28.0,
+          3.0
+        ]
+      },
+      "bytes": 165284,
+      "sha256": "3662ea4f41b0b8b4f0c46d84639cd88b6b15ebd999fc768705822d85a82f9a16"
+    },
+    "battery_slot_gauge": {
+      "triangles": 672,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 1783.3023,
+      "bbox_mm": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          49.90999984741211,
+          69.97599792480469,
+          2.0
+        ]
+      },
+      "bytes": 33684,
+      "sha256": "8f995361eb85ac9d164d82a0bd524ab52e0e7be15ac2f42b1b673f14c70cd5aa"
+    },
+    "joint_metal_coupon": {
+      "triangles": 472,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 689.8261,
+      "bbox_mm": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          17.799999237060547,
+          20.0,
+          2.0
+        ]
+      },
+      "bytes": 23684,
+      "sha256": "d45c7f46d1928a10708edf822e835d9e67e5ebff463d666f333607992f03b53b"
+    },
+    "joint_plastic_coupon": {
+      "triangles": 1028,
+      "watertight_edges": true,
+      "nonmanifold_edges": 0,
+      "mesh_volume_mm3": 728.802,
+      "bbox_mm": {
+        "min": [
+          0.0003159395419061184,
+          0.0,
+          0.0
+        ],
+        "max": [
+          21.100000381469727,
+          20.0,
+          2.0
+        ]
+      },
+      "bytes": 51484,
+      "sha256": "e544da54da0dd5e680fa3d14b42aa4bd893de1329f7b553b3e71897c4347ea74"
+    }
+  },
+  "physical_print_test": false,
+  "electronic_board_modified": false,
+  "omit_component": "BAT1 vertical XH-2A, user authorized direct battery leads",
+  "note": "PCB xy and slot verified by native readback; PCB thickness and component height envelopes are design assumptions."
+}

@@ -1,0 +1,11 @@
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+/sdcard/Android/data/com.yuhuan.x1/files/qa/./: 6 files pulled, 0 skipped. 15.2 MB/s (1070256 bytes in 0.067s)
+normal PASS
+/sdcard/Android/data/com.yuhuan.x1/files/qa/./: 6 files pulled, 0 skipped. 9.1 MB/s (1115490 bytes in 0.116s)
+small-largefont PASS
+/sdcard/Android/data/com.yuhuan.x1/files/qa/./: 6 files pulled, 0 skipped. 7.8 MB/s (433792 bytes in 0.053s)
+landscape PASS
+ALL UI CASES PASSED

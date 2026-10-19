@@ -1,0 +1,23 @@
+{
+  "file": "Voloop-X1-CG\u7248-\u8fd0\u955c\u4fee\u6b63.mp4",
+  "durationSeconds": 35,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "decodedFrames": 1050,
+  "fullDecode": "passed",
+  "video": "H.264 High / limited-range BT.709 / yuv420p",
+  "audio": "AAC / stereo / 48 kHz",
+  "audioMeasurement": {
+    "input_i": "-15.78",
+    "input_tp": "-1.22",
+    "input_lra": "3.30",
+    "input_thresh": "-26.11",
+    "output_i": "-16.43",
+    "output_tp": "-1.50",
+    "output_lra": "2.70",
+    "output_thresh": "-26.73",
+    "normalization_type": "dynamic",
+    "target_offset": "0.43"
+  }
+}

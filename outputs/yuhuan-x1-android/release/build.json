@@ -1,0 +1,41 @@
+{
+  "product": "语环 X1",
+  "version_name": "0.1.0",
+  "version_code": 1,
+  "package": "com.yuhuan.x1",
+  "min_sdk": 26,
+  "target_sdk": 36,
+  "apk_filename": "语环X1-Android-Demo-0.1.0.apk",
+  "apk_bytes": 17300259,
+  "apk_sha256": "59f21334e5eb32d4b072954714227c8a64f4307d16191285172eb31ca537256f",
+  "signing": "Android debug certificate / APK v2 verified",
+  "firmware": {
+    "version": "0.1.0",
+    "revision": "independent-mic-20261018",
+    "protocol": "local sync v1"
+  },
+  "review_date": "2026-10-18",
+  "verification": {
+    "debug_build_passed": true,
+    "unit_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "lint": {
+      "errors": 0,
+      "warnings": 24
+    },
+    "ui_emulator_android_api": 36,
+    "ui_cases_passed": [
+      "1080x2340 font1.0",
+      "984x2132 font2.0",
+      "2132x984 font1.0"
+    ],
+    "physical_recorder_tested": false,
+    "physical_ble_tested": false,
+    "physical_wifi_tested": false
+  },
+  "ai_asr_reminders_implemented": false,
+  "server_required": false,
+  "screenshots": "Android emulator; short test tone injected by separate instrumentation APK only"
+}

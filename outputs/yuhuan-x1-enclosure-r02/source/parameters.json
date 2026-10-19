@@ -1,0 +1,105 @@
+{
+  "pcb": {
+    "length": 99.9998,
+    "width": 74.041,
+    "thickness": 1.6,
+    "bottom_gap": 0.2,
+    "corner_radius": 2.54,
+    "battery_slot": {
+      "x": 17.8308,
+      "y": 6.5278,
+      "length": 41.91,
+      "width": 61.976
+    }
+  },
+  "case": {
+    "height": 7.6,
+    "floor": 1.0,
+    "lid": 1.0,
+    "margin": 5.4,
+    "wall": 1.5,
+    "corner_radius": 4.5
+  },
+  "battery": {
+    "nominal_x": 40.0,
+    "nominal_y": 60.0,
+    "nominal_z": 5.0,
+    "assumed_max_z": 5.2,
+    "tape": 0.2,
+    "slot_edge_clearance": 0.25
+  },
+  "screw": {
+    "boss_diameter": 6.2,
+    "clearance": 2.3,
+    "nut_pocket_af": 4.25,
+    "nut_seat_z": 2.8,
+    "head_recess_diameter": 4.4,
+    "head_seat_z": 5.9
+  },
+  "usb": {
+    "center_above_pcb": 1.5,
+    "opening_width": 14.5,
+    "opening_height": 5.0,
+    "opening_radius": 1.2,
+    "recess_end_x": 101.2
+  },
+  "sd": {
+    "opening_width": 17.5
+  },
+  "acoustic": {
+    "case_hole_diameter": 1.4,
+    "foam_outer_diameter": 3.0,
+    "foam_inner_diameter": 1.4,
+    "foam_uncompressed_thickness": 0.3,
+    "foam_installed_thickness": 0.2
+  },
+  "button": {
+    "cap_diameter": 4.6,
+    "hole_diameter": 5.1,
+    "flange_diameter": 6.4,
+    "flange_thickness": 0.9,
+    "stem_diameter": 2.6,
+    "switch_height": 1.5,
+    "free_gap": 0.15,
+    "protrusion": 0.35,
+    "maximum_downstroke": 0.35
+  },
+  "component_height": {
+    "default": 2.4,
+    "U1": 3.4,
+    "J1": 3.4,
+    "J2": 2.3,
+    "SW1": 1.5,
+    "SW2": 1.5,
+    "MIC1": 1.5,
+    "MIC2": 1.5,
+    "MIC3": 1.5,
+    "MIC4": 1.5,
+    "LED1": 0.8,
+    "LED2": 0.8,
+    "D1": 1.9
+  },
+  "hybrid": {
+    "boundary_x": 56.0,
+    "boundary_y": 35.0,
+    "inner_corner_radius": 8.0,
+    "joint_gap": 0.2,
+    "vertical_key_centers_y": [
+      47.5,
+      61.0
+    ],
+    "horizontal_key_centers_x": [
+      77.0,
+      94.0
+    ],
+    "antenna_proxy": {
+      "x0": 73.8628,
+      "y0": 53.015,
+      "x1": 93.8788,
+      "y1": 60.134
+    },
+    "rf_corner_fastener_material": "nonmetal M2 nylon screw AND nut",
+    "prototype_material": "All shell pieces SLA resin; metal-named pieces indicate future aluminum intent only.",
+    "exposed_keys": true
+  }
+}

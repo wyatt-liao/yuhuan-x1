@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&amp;family=Roboto+Flex:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#93000d", "on-tertiary": "#ffffff", "on-primary-fixed": "#00201d", "on-surface": "#181c1c", "inverse-primary": "#8cd3cb", "on-tertiary-fixed": "#410002", "secondary-fixed-dim": "#b8cac9", "on-secondary-fixed": "#0e1e1e", "tertiary-fixed": "#ffdad6", "surface-container-high": "#e5e9e8", "surface": "#f6fafa", "on-secondary-fixed-variant": "#3a4a49", "secondary-container": "#d4e6e5", "on-surface-variant": "#3f4947", "outline": "#6f7977", "surface-tint": "#1c6963", "on-primary": "#ffffff", "on-primary-container": "#95dcd4", "on-error": "#ffffff", "on-secondary-container": "#576867", "surface-container-lowest": "#ffffff", "tertiary-container": "#b20d17", "error": "#ba1a1a", "primary": "#004a45", "tertiary-fixed-dim": "#ffb4ac", "surface-container-low": "#f0f4f4", "secondary-fixed": "#d4e6e5", "tertiary": "#88000b", "on-background": "#181c1c", "inverse-surface": "#2c3131", "error-container": "#ffdad6", "surface-container-highest": "#dfe3e3", "on-error-container": "#93000a", "on-secondary": "#ffffff", "surface-bright": "#f6fafa", "primary-container": "#12635d", "secondary": "#516161", "background": "#f6fafa", "on-tertiary-container": "#ffc0b9", "outline-variant": "#bec9c6", "primary-fixed": "#a8f0e7", "surface-dim": "#d6dbda", "primary-fixed-dim": "#8cd3cb", "on-primary-fixed-variant": "#00504b", "inverse-on-surface": "#edf2f1", "surface-variant": "#dfe3e3", "surface-container": "#eaefee" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "space-lg": "1rem", "gutter": "1rem", "space-sm": "0.5rem", "margin": "1rem" }, "fontFamily": { "display-lg": ["Manrope"], "body-sm": ["Roboto Flex"], "label-lg": ["Roboto Flex"], "headline-sm": ["Manrope"], "label-sm": ["Roboto Flex"], "label-md": ["Roboto Flex"], "body-md": ["Roboto Flex"], "headline-lg": ["Manrope"], "body-lg": ["Roboto Flex"], "headline-md": ["Manrope"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="flex items-center justify-between px-space-lg h-7 select-none text-on-surface-variant font-label-sm text-label-sm"><span class="font-label-md text-label-md font-semibold text-on-surface tracking-tight">09:41</span><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">bluetooth_connected</span><span class="material-symbols-outlined text-[15px]">wifi</span><span class="material-symbols-outlined text-[16px]">battery_charging_full</span></div></div><div class="h-14 px-space-sm flex items-center justify-between"><div class="flex items-center gap-1"><button aria-label="返回" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Recording Detail</h1></div><div class="flex items-center gap-space-xs pr-space-sm"><button aria-label="更多操作" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-[84px] pb-safe bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Top Auxiliary Action Sub-Bar -->
+<div class="px-space-lg pt-space-xs pb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+        设备已永久保存
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">history_toggle_off</span>
+        回溯保存 (过去2小时)
+      </span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="分享音频" class="w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="更多操作" class="w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Title & Core Metadata Banner -->
+<div class="px-space-lg mb-space-md">
+<div class="flex items-start justify-between gap-space-sm group">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 cursor-pointer">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">10月24日 09:30 团队周会讨论</h2>
+<button aria-label="重命名" class="p-1 text-outline hover:text-primary transition-colors rounded-full">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 flex items-center gap-2">
+<span>2024年10月24日 09:30 - 10:45</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-semibold text-on-surface">时长 1:15:20</span>
+</p>
+</div>
+</div>
+<!-- Storage & Channel Pill Banner -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">mic_external_on</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-sm text-on-surface font-medium truncate">手机已同步完整单声道音频</p>
+<p class="font-body-sm text-body-sm text-secondary truncate">44.1kHz · 16bit · 无损PCM采样</p>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary-container">verified</span>
+</div>
+</div>
+<!-- Audio Waveform & Player Deck Card -->
+<div class="mx-space-lg mb-space-lg p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col">
+<!-- Channel & Scrubbing Header -->
+<div class="flex items-center justify-between mb-space-xs text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+        MONO · 纯净单声道
+      </span>
+<span class="font-mono tracking-tight text-on-surface font-semibold text-body-sm">
+<span class="text-primary-container" id="currentTimeDisplay">24:18</span> / 1:15:20
+      </span>
+</div>
+<!-- Waveform Visualizer Screen -->
+<div class="relative w-full h-24 bg-surface-container-low rounded-xl overflow-hidden py-2 px-1 flex flex-col justify-between select-none">
+<!-- Decibel Grid Lines -->
+<div class="absolute inset-x-0 top-3 border-t border-dashed border-outline-variant/30 flex justify-end pr-2 pointer-events-none">
+<span class="font-label-sm text-[9px] text-outline-variant">-6dB</span>
+</div>
+<div class="absolute inset-x-0 top-1/2 border-t border-dashed border-outline-variant/40 pointer-events-none"></div>
+<div class="absolute inset-x-0 bottom-3 border-t border-dashed border-outline-variant/30 flex justify-end pr-2 pointer-events-none">
+<span class="font-label-sm text-[9px] text-outline-variant">-24dB</span>
+</div>
+<!-- Waveform Bars Array (Simulated Instrument View) -->
+<div class="relative z-0 h-16 w-full flex items-center justify-between gap-[2px] px-2 overflow-hidden" id="waveformContainer">
+<!-- Played bars (Teal) -->
+<span class="w-[2px] h-3 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-5 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-8 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-12 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-6 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-4 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-10 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-14 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-9 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-5 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-7 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-11 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-15 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-13 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-8 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-4 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-12 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-14 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-10 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-6 bg-primary-container rounded-full shrink-0"></span>
+<!-- Tag Marker 1 at 32% -->
+<div class="relative flex flex-col items-center shrink-0">
+<span class="w-[2px] h-16 bg-primary rounded-full"></span>
+<span class="absolute -top-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</div>
+<span class="w-[2px] h-7 bg-primary-container rounded-full shrink-0"></span>
+<span class="w-[2px] h-11 bg-primary-container rounded-full shrink-0"></span>
+<!-- Playhead needle point (~40%) -->
+<div class="relative flex flex-col items-center shrink-0">
+<span class="w-[2.5px] h-full bg-tertiary-container shadow-sm"></span>
+<div class="absolute -top-1.5 w-3 h-3 bg-tertiary-container rounded-full shadow flex items-center justify-center">
+<div class="w-1 h-1 bg-surface-container-lowest rounded-full"></div>
+</div>
+</div>
+<!-- Unplayed bars (Muted Slate) -->
+<span class="w-[2px] h-13 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-9 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-4 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-10 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-14 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-15 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-8 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-5 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-11 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-12 bg-outline-variant/60 rounded-full shrink-0"></span>
+<!-- Tag Marker 2 at ~68% -->
+<div class="relative flex flex-col items-center shrink-0">
+<span class="w-[2px] h-14 bg-secondary rounded-full"></span>
+<span class="absolute -top-1 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span>
+</div>
+<span class="w-[2px] h-6 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-9 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-13 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-10 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-7 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-3 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-8 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-12 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-5 bg-outline-variant/60 rounded-full shrink-0"></span>
+<span class="w-[2px] h-7 bg-outline-variant/60 rounded-full shrink-0"></span>
+</div>
+<!-- Time Ruler Labels -->
+<div class="flex justify-between items-center px-2 pt-1 font-mono text-[10px] text-outline">
+<span>00:00</span>
+<span>15:00</span>
+<span class="text-primary-container font-semibold">24:18</span>
+<span>45:00</span>
+<span>1:15:20</span>
+</div>
+</div>
+<!-- Precision Control Row -->
+<div class="mt-space-lg flex items-center justify-between">
+<!-- Speed selector toggle -->
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-0.5" id="speedBtn" onclick="cycleSpeed()">
+<span id="speedLabel">1.0x</span>
+<span class="material-symbols-outlined text-[14px] text-outline">unfold_more</span>
+</button>
+<!-- Central Scrub & Play Bar -->
+<div class="flex items-center gap-space-md">
+<!-- Replay 15s -->
+<button aria-label="后退15秒" class="w-11 h-11 rounded-full flex flex-col items-center justify-center text-on-surface hover:bg-surface-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[24px]">export_notes</span>
+</button>
+<!-- Main Big Play/Pause Trigger (56dp / Level 3 elevation) -->
+<button aria-label="播放或暂停" class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg active:scale-95 transition-transform" id="mainPlayBtn" onclick="togglePlayState()">
+<span class="material-symbols-outlined text-[32px]" id="playIcon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Forward 30s -->
+<button aria-label="快进30秒" class="w-11 h-11 rounded-full flex flex-col items-center justify-center text-on-surface hover:bg-surface-container active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[24px]">forward_30</span>
+</button>
+</div>
+<!-- Bookmark Anchor Button -->
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high active:scale-95 transition-all text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>打标记</span>
+</button>
+</div>
+</div>
+<!-- Segmented Navigation Tabs: [音频] · [文字 (AI)] · [摘要 (AI)] -->
+<div class="px-space-lg mb-space-md">
+<div class="p-1 rounded-xl bg-surface-container flex items-center">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-lowest text-on-surface shadow-sm" id="tabAudio" onclick="switchTab('audio')">
+        音频
+      </button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1" id="tabText" onclick="switchTab('text')">
+<span>文字</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-[10px] text-outline font-normal">AI</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1" id="tabSummary" onclick="switchTab('summary')">
+<span>摘要</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-high text-[10px] text-outline font-normal">AI</span>
+</button>
+</div>
+</div>
+<!-- Tab Content Containers -->
+<div class="px-space-lg space-y-space-md">
+<!-- PANEL 1: [音频] Audio File Details View -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest space-y-space-md" id="panelAudio">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<span class="font-headline-sm text-headline-sm text-on-surface">硬件原始音频档案</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">本地副本</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">文件大小</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">54.2 MB</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">声道构型</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">单声道 (Mono)</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">编码规格</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">16-bit WAV PCM</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">采样率</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">44,100 Hz</span>
+</div>
+</div>
+<!-- Storage Isolation Assurance -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary-container shrink-0 mt-0.5">shield</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">隐私安全与物理隔离</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 leading-relaxed">
+            该录音已存放于手机沙盒本地存储。系统严格遵循无痕传输协议，音频流全程不向任何外部云端服务器上传或作特征留存。
+          </p>
+</div>
+</div>
+</div>
+<!-- PANEL 2: [文字 (AI)] View with Honest Default & Explicit Sample Preview -->
+<div class="hidden flex-col gap-space-md" id="panelText">
+<!-- Honest State Card (Default Reality) -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest flex flex-col items-center text-center" id="honestTextState">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">hourglass_empty</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AI 离线转写引擎待接入</h3>
+<p class="font-body-sm text-body-sm text-secondary max-w-[280px] mt-1 leading-relaxed">
+          音频已完整保存在手机本地。当前处于“尚未分析”状态，系统不虚构假转写内容。
+        </p>
+<!-- Preview Switch Toggle -->
+<div class="mt-space-lg w-full pt-space-md border-t border-surface-container flex items-center justify-between">
+<div class="text-left">
+<span class="font-label-md text-label-md text-on-surface font-semibold block">【示例预览】开关</span>
+<span class="font-label-sm text-label-sm text-outline">探索转写交互与时间戳跳转能力</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-all shadow-sm" onclick="toggleTextPreview(true)">
+            开启预览
+          </button>
+</div>
+</div>
+<!-- Transcript Preview Card (Rendered on Preview) -->
+<div class="hidden p-space-lg rounded-2xl bg-surface-container-lowest flex flex-col space-y-space-md" id="sampleTextState">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-semibold px-2 py-0.5 rounded bg-tertiary-fixed">
+<span class="material-symbols-outlined text-[13px]">info</span>
+            【AI 转写功能预览 · 非真实结果】
+          </span>
+<button class="text-secondary hover:text-on-surface font-label-sm text-label-sm underline" onclick="toggleTextPreview(false)">
+            关闭预览
+          </button>
+</div>
+<!-- Transcript Item 1 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="seekAudio('09:31:05')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">发言人 1</span>
+<span class="font-mono text-label-sm text-secondary group-hover:text-primary-container transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">play_circle</span>
+              09:31:05
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “本次 X1 硬件测试，双按键反馈手感很好，需要重点验证长按回溯保存。”
+          </p>
+</div>
+<!-- Transcript Item 2 -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="seekAudio('09:35:20')">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">发言人 2</span>
+<span class="font-mono text-label-sm text-secondary group-hover:text-primary-container transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">play_circle</span>
+              09:35:20
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “蓝牙传输速度已满足指令同步，大量音频务必走同一局域网 Wi-Fi。”
+          </p>
+</div>
+</div>
+</div>
+<!-- PANEL 3: [摘要与待办] View with Explicit Sample Banner -->
+<div class="hidden flex-col gap-space-md" id="panelSummary">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-semibold px-2 py-0.5 rounded bg-tertiary-fixed">
+<span class="material-symbols-outlined text-[13px]">info</span>
+            【提取信息与待办示例】
+          </span>
+<span class="font-label-sm text-label-sm text-outline">规则化解析</span>
+</div>
+<!-- Key Decision Card -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+            会议共识摘要
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            针对硬件固件回溯策略达成一致：优先保障本地无损录音写入稳定性，局域网连接时再自动完成高吞吐对齐。
+          </p>
+</div>
+<!-- Action Items List with Direct Audio Anchors -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">待办任务项</span>
+<div class="p-space-sm rounded-xl bg-surface flex items-center justify-between gap-2 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">check_box_outline_blank</span>
+<span class="font-body-md text-body-md text-on-surface truncate">明天下午 3 点前提交 X1 按键外壳样件</span>
+</div>
+<button class="shrink-0 px-2.5 py-1 rounded-lg bg-surface-container-high hover:bg-secondary-container text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" onclick="seekAudio('09:42:15')">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+<span>09:42:15</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dual Risk Boundary & Device Tag De-coupling Actions -->
+<div class="mx-space-lg mt-space-lg p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm mb-0.5">
+<span class="material-symbols-outlined text-[16px] text-outline">rule_folder</span>
+<span class="font-semibold text-on-surface">独立副本生命周期管理</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+      手机端与硬件录音器是两个独立存储实体。同步成功不意味着设备端被删除。请根据需要选择处置范围：
+    </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Button A: Delete Local Cache Only -->
+<button class="w-full py-3 px-space-md rounded-xl bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center justify-between active:scale-[0.99]" onclick="confirmAction('local')">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">phone_android</span>
+<span>删除手机本地副本</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">设备卡内仍保留标记</span>
+</button>
+<!-- Button B: Release Hardware Permanent Tag -->
+<button class="w-full py-3 px-space-md rounded-xl bg-error-container/40 hover:bg-error-container/70 text-error font-label-md text-label-md font-semibold transition-all flex items-center justify-between active:scale-[0.99]" onclick="confirmAction('device')">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bookmark_remove</span>
+<span>解除设备保存标记</span>
+</div>
+<span class="font-label-sm text-label-sm text-error/80">将恢复为可被24小时覆盖</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let isPlaying = false;
+  const speeds = ['1.0x', '1.2x', '1.5x', '2.0x'];
+  let currentSpeedIdx = 0;
+
+  function togglePlayState() {
+    isPlaying = !isPlaying;
+    const playIcon = document.getElementById('playIcon');
+    if (isPlaying) {
+      playIcon.innerText = 'pause';
+      playIcon.parentElement.classList.replace('bg-primary-container', 'bg-tertiary-container');
+    } else {
+      playIcon.innerText = 'play_arrow';
+      playIcon.parentElement.classList.replace('bg-tertiary-container', 'bg-primary-container');
+    }
+  }
+
+  function cycleSpeed() {
+    currentSpeedIdx = (currentSpeedIdx + 1) % speeds.length;
+    document.getElementById('speedLabel').innerText = speeds[currentSpeedIdx];
+  }
+
+  function switchTab(tab) {
+    // Reset all tabs
+    const tabs = ['audio', 'text', 'summary'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+      btn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-medium text-secondary hover:text-on-surface transition-all flex items-center justify-center gap-1';
+      const panel = document.getElementById('panel' + t.charAt(0).toUpperCase() + t.slice(1));
+      if (panel) panel.classList.add('hidden');
+      if (panel) panel.classList.remove('flex');
+    });
+
+    // Activate selected
+    const activeBtn = document.getElementById('tab' + tab.charAt(0).toUpperCase() + tab.slice(1));
+    activeBtn.className = 'flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all bg-surface-container-lowest text-on-surface shadow-sm flex items-center justify-center gap-1';
+    
+    const activePanel = document.getElementById('panel' + tab.charAt(0).toUpperCase() + tab.slice(1));
+    if (activePanel) {
+      activePanel.classList.remove('hidden');
+      activePanel.classList.add('flex');
+    }
+  }
+
+  function toggleTextPreview(show) {
+    const honestState = document.getElementById('honestTextState');
+    const sampleState = document.getElementById('sampleTextState');
+    if (show) {
+      honestState.classList.add('hidden');
+      sampleState.classList.remove('hidden');
+    } else {
+      honestState.classList.remove('hidden');
+      sampleState.classList.add('hidden');
+    }
+  }
+
+  function seekAudio(timecode) {
+    const display = document.getElementById('currentTimeDisplay');
+    if (display) {
+      display.innerText = timecode.length > 5 ? timecode.substring(3) : timecode;
+    }
+    if (!isPlaying) {
+      togglePlayState();
+    }
+  }
+
+  function confirmAction(type) {
+    if (type === 'local') {
+      alert('已确认：仅移除手机本地的 54.2 MB WAV 缓存。硬件端录音卡仍然安全锁存此段内容。');
+    } else if (type === 'device') {
+      alert('已确认向硬件发送解除永久保存标记指令。该音频段落将恢复到24小时循环覆盖队列中。');
+    }
+  }
+</script></main></body></html>

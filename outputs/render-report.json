@@ -1,0 +1,21 @@
+{
+  "product": "Voloop X1",
+  "durationSeconds": 35,
+  "fps": 30,
+  "frames": 1050,
+  "width": 1920,
+  "height": 1080,
+  "codec": "H.264 High / yuv420p + AAC stereo",
+  "renderer": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Pro, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "elapsedSeconds": 61,
+  "browserErrors": [],
+  "bytes": 9875208,
+  "source": "Blender EEVEE Next + film.js compositing",
+  "motion": "C2 continuous quintic Hermite, unwrapped rotation",
+  "cgFrames": 1050,
+  "exterior": "Industrial design concept, not fabrication model",
+  "ai": "Mobile AI vision, not delivered app feature"
+}

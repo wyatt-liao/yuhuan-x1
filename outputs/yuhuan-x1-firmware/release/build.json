@@ -1,0 +1,21 @@
+{
+  "product": "Yuhuan X1",
+  "version": "0.1.0",
+  "board": "independent-mic-20261018",
+  "idf": "v5.5.5",
+  "idfCommit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+  "chip": "esp32s3",
+  "flash": "16MB DIO 80MHz",
+  "psram": "8MB Octal",
+  "offsets": {
+    "bootloader.bin": "0x0",
+    "partition-table.bin": "0x8000",
+    "yuhuan_x1.bin": "0x10000"
+  },
+  "sha256": {
+    "partition-table.bin": "fd8026bff850ca0dee41c41305160317fffe604dda30a9bd5a701ac82d96fa17",
+    "yuhuan_x1.bin": "d4629991e12813a2df2b0274351a5addaee65b39766e48c117163c34b8f16ce4",
+    "bootloader.bin": "1afa141007ebc93982773dabbda252c27767eeb5ce0f19caa2264ab29720cad8"
+  },
+  "hardwareTested": false
+}

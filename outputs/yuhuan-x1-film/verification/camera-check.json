@@ -1,0 +1,30 @@
+{
+  "before": {
+    "largestFrameRotation": {
+      "frame": 302,
+      "time": 10.066666666666666,
+      "degrees": 179.99999134883265
+    },
+    "minimumCameraUpDotWorldY": -1
+  },
+  "after": {
+    "largestFrameRotation": {
+      "frame": 433,
+      "time": 14.433333333333334,
+      "degrees": 1.8912794748054493
+    },
+    "minimumCameraUpDotWorldY": 0.8775579333305359
+  },
+  "changedOrientationFrames": [
+    279,
+    457
+  ],
+  "unchangedOrientationOutsideRerenderRange": true,
+  "maxBakedPositionError": 5.394430679928064e-7,
+  "cameraUp": "world +Y, explicit right/up/back basis",
+  "approachSeconds": [
+    9.05,
+    10.85
+  ],
+  "maxPoseDifferenceOutsideRerenderRange": 0
+}

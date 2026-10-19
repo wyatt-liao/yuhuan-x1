@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The existing recorder exposes LAN HTTP. LanTransport rejects all non-private IPv4 addresses. -->
+<network-security-config><base-config cleartextTrafficPermitted="true" /></network-security-config>
