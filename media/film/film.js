@@ -86,9 +86,9 @@ export function render(time){
   kinetic(details[i],136,403,28,t-cuts[i]-.06,MUTED,'left',400);
   txt('当前 Android Demo 界面 · AI 整理与提醒为后续规划',960,1015,20,'#93939a',400,'center');
  }else if(t<29){
-  const s=t-27;kinetic('轻薄，随身。',134,288,58,s,WHITE,'left',400);
-  kinetic('9.80',112,700,240,s,WHITE,'left',300,sans,-9);kinetic('mm',682,685,65,s+.02,'#c3c3cb','left',300);
-  txt('R03 主体厚度 · 含按键最高 10.15 mm',143,790,25,MUTED,400);
+  const s=t-27;kinetic('轻薄，随身',134,288,58,s,WHITE,'left',400);
+  kinetic('6.5',112,700,240,s,WHITE,'left',300,sans,-9);kinetic('mm',565,685,65,s+.02,'#c3c3cb','left',300);
+  txt('目标厚度描述 · 结构实物待复核',143,790,25,MUTED,400);
  }else if(t<31){
   const active=t>=30,s=t-(active?30:29);
   kinetic(active?'人声四麦。':'静时一麦。',128,455,81,s,WHITE,'left',400);
@@ -96,7 +96,7 @@ export function render(time){
   wave(136,696,470,active?72:24,t,{alpha:.5,selected:1});
  }else{
   const s=t-31;kinetic('语环 X1',124,492,132,s,WHITE,'left',400,sans,-4);
-  kinetic('重要的，回头还在。',138,630,48,s-.45,'#c5c5cd','left',400);
+  kinetic('重要的，回头还在',138,630,48,s-.45,'#c5c5cd','left',400);
   ctx.save();ctx.globalAlpha*=out((s-.6)/.5);txt('X1 · 轻薄录音卡',142,733,26,'#98989f',400);ctx.restore();
   ctx.save();ctx.globalAlpha*=smooth((s-1)/.5);txt('R03 结构渲染 · 手机 AI 为功能规划 · 24h 为循环保留窗口 · 实物待验证',960,1030,18,'#6e6e75',400,'center');ctx.restore();
  }

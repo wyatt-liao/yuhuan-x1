@@ -10,9 +10,9 @@
     "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Pro, Unspecified Version)",
     "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
   },
-  "elapsedSeconds": 54,
+  "elapsedSeconds": 56,
   "browserErrors": [],
-  "bytes": 6346240,
+  "bytes": 6332830,
   "source": "Blender EEVEE Next + film.js compositing",
   "motion": "C2 continuous quintic Hermite, unwrapped rotation",
   "cgFrames": 1050,
