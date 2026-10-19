@@ -10,8 +10,9 @@
 | Android 原始交付工程 | [源码 ZIP](语环X1-安卓工程-0.1.0.zip) | 当前源码见 [android/](../android/README.md) |
 | 固件 Demo 0.1.0 | [固件 ZIP](语环X1-固件Demo-0.1.0.zip) | 当前源码与烧录步骤见 [firmware/](../firmware/README.md) |
 | R03 树脂打印样壳 | [完整 ZIP](语环X1-嘉立创打印优化与按键拼版-R03.zip) · [SHA-256](语环X1-嘉立创打印优化与按键拼版-R03.zip.sha256) | [打印说明](../enclosure/r03/README-打印与拼版说明.md) |
-| 最新 CG 产品影片 | [运镜修正版 MP4](Voloop-X1-CG版-运镜修正.mp4) | [影片说明](../media/film/README.md) |
-| 最新 CG 原始交付工程 | [源码 ZIP](Voloop-X1-CG动画源码-运镜修正.zip) | 当前源码见 [media/film/](../media/film/) |
+| 当前 R03 统一版影片 | [MP4](语环X1-R03统一版.mp4) | [影片说明](../media/film/README.md)，与 R03 CAD 同源模型 |
+| R03 影片工程 | [完整 ZIP](语环X1-R03影片工程.zip) | Blender 场景、实时预览与播放器 |
+| 产品研发汇报 | [HTML](yuhuan-x1-report/语环X1-产品研发汇报.html) · [PDF](yuhuan-x1-report/语环X1-产品研发汇报.pdf) · [完整 ZIP](语环X1-汇报资料.zip) | [使用说明](yuhuan-x1-report/使用说明.md) · [讲稿](yuhuan-x1-report/汇报讲稿.md) |
 
 ## 外壳打印包
 
@@ -34,12 +35,13 @@
 
 | 版本 | 视频 | 原始交付源码 |
 |---|---|---|
-| CG 运镜修正版，当前版本 | [MP4](Voloop-X1-CG版-运镜修正.mp4) | [ZIP](Voloop-X1-CG动画源码-运镜修正.zip) |
+| R03 CAD 同源统一版，当前版本 | [MP4](语环X1-R03统一版.mp4) | [ZIP](语环X1-R03影片工程.zip) |
+| CG 运镜修正历史版 | [MP4](Voloop-X1-CG版-运镜修正.mp4) | [ZIP](Voloop-X1-CG动画源码-运镜修正.zip) |
 | CG 连续运镜历史版 | [MP4](Voloop-X1-连续运镜-CG版.mp4) | [ZIP](Voloop-X1-CG动画源码.zip) |
 | Voloop 发布会快闪历史版 | [MP4](Voloop-X1-发布会快闪片.mp4) | [ZIP](Voloop-X1-影片源码.zip) |
 | 语环 X1 早期概念片 | [MP4](语环X1-产品概念片.mp4) | [ZIP](语环X1-影片源码.zip) |
 
-影片展示的 AI 和 6 mm 外观目标属于产品愿景，当前软件与结构状态见[项目状态](../docs/PROJECT_STATUS.md)。
+当前 R03 影片与汇报统一使用 9.80 mm 主体、10.15 mm 含按键最高厚度和当前 Android Demo 截图。AI 整理与提醒仍为规划。旧概念片的 6 mm 外观目标仅保留作历史记录；当前软件与结构状态见[项目状态](../docs/PROJECT_STATUS.md)。
 
 ## 校验与历史记录
 

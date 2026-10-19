@@ -1,9 +1,10 @@
-# 产品影片与演示工程
+# 产品影片与汇报
 
-当前影片工程位于 [`film/`](film/README.md)，包含 Blender 场景、Three.js 预览、代码合成配乐与验证记录。
+当前视频与汇报统一使用语环 X1 名称和 R03 CAD 结构：主体厚度 9.80 mm，含按键最高 10.15 mm，保留铝塑分区、外露圆头榫接和实际开孔。
 
-- [播放与重渲染说明](film/README.md)
-- [影片与源码包下载](../outputs/README.md#产品影片)
-- [Blender 源文件](film/assets/Voloop-X1-CG.blend)
+- [R03 影片工程与播放说明](film/README.md)
+- [当前 Blender 场景](film/assets/Yuhuan-X1-R03-CG.blend)
+- [HTML 汇报与构建源码](report/README.md)
+- [影片、汇报及源码包下载](../outputs/README.md)
 
-影片中的 Voloop X1 为本产品演示字标。6 mm 厚度是外观概念目标；AI 转写、摘要和提醒是功能愿景。实际打印尺寸以 [R03 外壳](../enclosure/README.md)为准，当前 App 和固件能力见[项目状态](../docs/PROJECT_STATUS.md)。
+手机画面来自当前 Android Demo；AI 整理与提醒仍为后续开发计划。结构、续航及硬件实物验证状态见[项目进度](../docs/PROJECT_STATUS.md)。旧概念片保留在历史下载中。

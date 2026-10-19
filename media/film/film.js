@@ -56,20 +56,20 @@ export function render(time){
  else if(t<6.3){
   const s=t-5;kinetic('往回。',960,550,196,s,WHITE,'center',500);wave(390,780,1140,85,s,{reverse:true,selected:clamp(s),alpha:.65});
  }else if(t<8){
-  const s=t-6.3;kinetic(s<1?'保存。':'Voloop',130,548,s<1?158:152,s<1?s:s-1,WHITE,'left',s<1?500:400,s<1?sans:brand,-3.5);
+  const s=t-6.3;kinetic(s<1?'保存。':'语环 X1',130,548,s<1?158:132,s<1?s:s-1,WHITE,'left',s<1?500:400,sans,-3.5);
  }else if(t<10.5){
   const s=t-8;
   ctx.save();ctx.globalAlpha*=1-smooth((t-9.35)/.55);
   kinetic('24',115,674,368,s,WHITE,'left',300,sans,-14);kinetic('h',565,660,108,s+.03,'#c7c7cd','left',300);
-  kinetic('循环记录。',140,784,59,s-.1,WHITE,'left',400);txt('让每一刻，都有迹可循。',145,854,27,MUTED,400);
+  kinetic('循环记录。',140,784,59,s-.1,WHITE,'left',400);txt('循环保留窗口 · 续航待实测',145,854,27,MUTED,400);
   ctx.restore();
  }else if(t<11.5){
-  const s=t-10.5;kinetic('按一下。',420,730,112,s,WHITE,'left',400);
+  const s=t-10.5;kinetic('按一下。',420,730,112,s,INK,'left',400);
  }else if(t<13){
-  const s=t-11.5;kinetic('前 1 小时。',420,730,112,s,WHITE,'left',400);kinetic('已为你保存。',428,805,30,s-.12,'#c5ccd6','left',400);
+  const s=t-11.5;kinetic('前 1 小时。',420,730,112,s,INK,'left',400);kinetic('已为你保存。',428,805,30,s-.12,'#4f5b62','left',400);
  }else if(t<14.2){
-  const s=t-13;kinetic('连按几次。',420,730,104,s,WHITE,'left',400);
-  const n=t<13.1?0:t<13.32?1:t<13.54?2:3;txt(String(n),1720,827,134,WHITE,300,'right',sans,-5);txt('h',1745,820,54,'#c5ccd6',300);
+  const s=t-13;kinetic('连按几次。',420,730,104,s,INK,'left',400);
+  const n=t<13.1?0:t<13.32?1:t<13.54?2:3;txt(String(n),1720,827,134,INK,300,'right',sans,-5);txt('h',1745,820,54,'#4f5b62',300);
  }else if(t<17){
   const s=t-14.8;kinetic('3',125,655,366,s,WHITE,'left',300,sans,-12);kinetic('h',377,645,98,s+.05,'#c7c7cd','left',300);
   kinetic('保存几小时。',145,768,59,s-.08,WHITE,'left',400);ctx.save();ctx.globalAlpha*=out(s/.2);txt('连按 N 次，保存前 N 小时。',150,840,26,MUTED,400);ctx.restore();
@@ -84,21 +84,21 @@ export function render(time){
   kinetic(labels[i],128,319,i===4?66:92,t-cuts[i],WHITE,'left',400);
   const details=['在手机上，继续。','把灵感，留给下一次创造。','对话里的事，有了着落。','重要约定，及时想起。','每一天，多一份从容。'];
   kinetic(details[i],136,403,28,t-cuts[i]-.06,MUTED,'left',400);
-  txt('手机 AI 功能愿景',960,1015,20,'#737379',400,'center');
+  txt('当前 Android Demo 界面 · AI 整理与提醒为后续规划',960,1015,20,'#93939a',400,'center');
  }else if(t<29){
   const s=t-27;kinetic('轻薄，随身。',134,288,58,s,WHITE,'left',400);
-  kinetic('6',112,700,400,s,WHITE,'left',300,sans,-15);kinetic('mm',388,685,82,s+.02,'#c3c3cb','left',300);
-  txt('外观设计目标',143,790,25,MUTED,400);
+  kinetic('9.80',112,700,240,s,WHITE,'left',300,sans,-9);kinetic('mm',682,685,65,s+.02,'#c3c3cb','left',300);
+  txt('R03 主体厚度 · 含按键最高 10.15 mm',143,790,25,MUTED,400);
  }else if(t<31){
   const active=t>=30,s=t-(active?30:29);
   kinetic(active?'人声四麦。':'静时一麦。',128,455,81,s,WHITE,'left',400);
   kinetic(active?'该听清时，听清。':'安静时，更省电。',136,544,30,s-.1,MUTED,'left',400);
   wave(136,696,470,active?72:24,t,{alpha:.5,selected:1});
  }else{
-  const s=t-31;kinetic('Voloop',124,492,154,s,WHITE,'left',400,brand,-5);
+  const s=t-31;kinetic('语环 X1',124,492,132,s,WHITE,'left',400,sans,-4);
   kinetic('重要的，回头还在。',138,630,48,s-.45,'#c5c5cd','left',400);
   ctx.save();ctx.globalAlpha*=out((s-.6)/.5);txt('X1 · 轻薄录音卡',142,733,26,'#98989f',400);ctx.restore();
-  ctx.save();ctx.globalAlpha*=smooth((s-1)/.5);txt('外观概念 · 6 mm 为设计目标 · 手机 AI 为功能愿景 · 24h 为循环保留窗口',960,1030,18,'#6e6e75',400,'center');ctx.restore();
+  ctx.save();ctx.globalAlpha*=smooth((s-1)/.5);txt('R03 结构渲染 · 手机 AI 为功能规划 · 24h 为循环保留窗口 · 实物待验证',960,1030,18,'#6e6e75',400,'center');ctx.restore();
  }
  const fade=smooth(t/.08)*smooth((35-t)/.4);if(fade<1){ctx.fillStyle=`rgba(3,3,4,${1-fade})`;ctx.fillRect(0,0,W,H);}
  return t;

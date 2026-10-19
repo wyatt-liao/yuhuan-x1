@@ -1,0 +1,16 @@
+{
+  "product": "语环 X1",
+  "revision": "R03",
+  "file": "outputs/语环X1-R03统一版.mp4",
+  "durationSeconds": 35,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "video": "H.264 High / yuv420p",
+  "audio": "AAC stereo",
+  "fullDecodePassed": true,
+  "meanVolumeDb": -17.2,
+  "maxVolumeDb": -1.3,
+  "renderedFrames": 1050,
+  "browserErrors": []
+}

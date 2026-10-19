@@ -1,4 +1,6 @@
 node_modules/
 *.mp4
+!assets/film-r03.mp4
 *.wav
 .DS_Store
+preview/

@@ -1,9 +1,9 @@
 {
-  "name": "voloop-x1-film",
-  "version": "3.0.1",
+  "name": "yuhuan-x1-r03-film",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
-  "description": "Continuous nonlinear Voloop X1 film with Blender PBR studio rendering and PCB-aligned geometry",
+  "description": "Yuhuan X1 R03 film with exact enclosure CAD geometry and current Android Demo screenshots",
   "scripts": {
     "preview": "python3 -m http.server 8765 --bind 127.0.0.1",
     "render": "node tools/render.mjs"

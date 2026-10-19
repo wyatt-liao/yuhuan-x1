@@ -1,6 +1,8 @@
 import * as THREE from './vendor/three.module.min.js';
 import {PCB} from './product-data.js';
 import {sampleMotion,ease} from './motion.js';
+const R03=await fetch(new URL('./assets/r03-assembly.json',import.meta.url)).then(response=>{if(!response.ok)throw new Error('R03 CAD mesh missing');return response.json();});
+const appImages=await Promise.all(['android-today.png','android-detail.png'].map(async name=>{const image=new Image();image.src=new URL('./assets/'+name,import.meta.url);await image.decode();return image;}));
 
 // All XY coordinates use the same rigid transform of the real PCB. One unit = 10 mm.
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
@@ -30,7 +32,7 @@ export class ProductStudio {
   this.renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true,powerPreference:'high-performance'});
   this.renderer.setSize(1920,1080);this.renderer.setPixelRatio(1);this.renderer.setClearColor(0,0);
   this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;
-  this.renderer.toneMappingExposure=1.00;
+  this.renderer.toneMappingExposure=.72;
   this.scene=new THREE.Scene();this.camera=new THREE.PerspectiveCamera(34,16/9,.1,160);
   this.scene.add(new THREE.HemisphereLight(0xffffff,0x73737a,.65));
   this.key=this.light(0xffffff,2.8,[-5,7,10]);this.rim=this.light(0xe7efff,2.4,[8,-2,-5]);
@@ -77,64 +79,33 @@ export class ProductStudio {
  }
  buildCard(){
   const card=this.card=new THREE.Group();this.scene.add(card);
-  // Main shell: exactly 6 mm visual envelope, including flush controls; mechanical target only.
-  mesh(solid(10.23,7.63,.29,.43,.035),this.metal,card);
-  const front=rounded(10.22,7.62,.28);for(const b of PCB.buttons)front.holes.push(hole(...b.modelXY,.253));
-  const frontGeometry=new THREE.ExtrudeGeometry(front,{depth:.018,bevelEnabled:true,bevelSize:.006,bevelThickness:.004,bevelSegments:4,steps:1,curveSegments:32});
-  const pos=frontGeometry.attributes.position,uv=frontGeometry.attributes.uv;
-  for(let i=0;i<uv.count;i++)uv.setXY(i,pos.getX(i)/10.22+.5,pos.getY(i)/7.62+.5);
-  mesh(frontGeometry,this.graphite,card,[0,0,.251]);
-  const back=rounded(10.22,7.62,.28);for(const mic of PCB.microphones)back.holes.push(hole(...mic.modelXY,.067));
-  plane(back,this.rearMaterial,card,-.295,10.22,7.62);
-  card.add(outline(10.25,7.65,.29,.265,0xe2e3e7,.28));card.add(outline(10.25,7.65,.29,-.265,0xc6c9ce,.25));
-  this.frontFaces=[];
-  const decalCanvas=document.createElement('canvas');decalCanvas.width=2048;decalCanvas.height=1536;const d=decalCanvas.getContext('2d');
-  function at(x,y){return [(x/10.22+.5)*2048,(.5-y/7.62)*1536];}
-  d.fillStyle='#3c4149';d.font=`400 92px ${brand}`;d.letterSpacing='-2px';d.fillText('Voloop',146,1280);
-  const decal=mesh(new THREE.PlaneGeometry(10.22,7.62),new THREE.MeshBasicMaterial({map:texture(decalCanvas),transparent:true,depthWrite:false}),card,[0,0,.275]);
-  this.buttons=[];
-  PCB.buttons.forEach((b,i)=>{
-   const [x,y]=b.modelXY;
-   mesh(new THREE.CircleGeometry(.251,64),this.black,card,[x,y,.260]);
-   mesh(new THREE.RingGeometry(.229,.253,72),this.metal,card,[x,y,.275]);
-   const cap=new THREE.Group();cap.position.set(x,y,.279);card.add(cap);
-   const body=mesh(new THREE.CylinderGeometry(.222,.224,.038,72),this.capMaterial,cap);body.rotation.x=Math.PI/2;
-   if(i===0)mesh(new THREE.CircleGeometry(.038,32),new THREE.MeshBasicMaterial({color:0xbd6055}),cap,[0,0,.020]);
-   else{
-    const path=new THREE.Shape();path.moveTo(-.046,.061);path.lineTo(.046,.061);path.lineTo(.046,-.063);path.lineTo(0,-.027);path.lineTo(-.046,-.063);path.closePath();
-    mesh(new THREE.ShapeGeometry(path),new THREE.MeshBasicMaterial({color:0xe6e8ed}),cap,[0,0,.021]);
+  this.buttons=[];this.micRims=[];this.frontFaces=[];this.r03parts=[];
+  const materials={
+   metal:new THREE.MeshPhysicalMaterial({color:0xbcc3c9,metalness:.96,roughness:.30,flatShading:true}),
+   plastic:new THREE.MeshPhysicalMaterial({color:0xb5bdc2,metalness:0,roughness:.39,flatShading:true}),
+   button:new THREE.MeshStandardMaterial({color:0x596169,metalness:0,roughness:.42,flatShading:true}),
+   pcb:new THREE.MeshStandardMaterial({color:0x14564a,metalness:.15,roughness:.52}),
+   battery:new THREE.MeshStandardMaterial({color:0xa8b2b9,metalness:.55,roughness:.42}),
+   fastener:new THREE.MeshStandardMaterial({color:0x7b858d,metalness:.85,roughness:.31}),
+   nylon:new THREE.MeshStandardMaterial({color:0x7b858d,metalness:0,roughness:.45}),
+   component:new THREE.MeshStandardMaterial({color:0x474f56,metalness:.2,roughness:.44})
+  };
+  // Same tessellation as R03 CAD: actual 110.80 × 84.84 × 9.80 mm shell.
+  for(const item of R03){
+   const name=item.name;if(name==='BUTTONS_SPRUE_OPTIONAL')continue;
+   const vertices=item.vertices.flatMap(v=>[(v[0]-49.9999)/10,(v[1]-37.0205)/10,(v[2]-4.9)/10]);
+   const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geometry.setIndex(item.faces.flat());geometry.computeVertexNormals();
+   const key=['base_metal','lid_metal'].includes(name)?'metal':name.includes('rf_plastic')?'plastic':name.startsWith('button')?'button':name==='PCB'?'pcb':name==='battery'?'battery':name.includes('NYLON')?'nylon':name.includes('reference')?'fastener':'component';
+   const object=mesh(geometry,materials[key],card);object.name=name;this.r03parts.push(object);
+   if(name.startsWith('lid'))this.frontFaces.push(object);
+   if(name==='button_record'||name==='button_recall'){
+    object.userData={designator:name==='button_record'?'SW1':'SW2',baseZ:0};
+    this.buttons[name==='button_record'?0:1]=object;
    }
-   cap.userData={designator:b.designator,baseZ:.279};this.buttons.push(cap);
-  });
-  this.micRims=[];
-  PCB.microphones.forEach(m=>{
-   const [x,y]=m.modelXY;const disc=mesh(new THREE.CircleGeometry(.066,48),this.black,card,[x,y,-.298]);disc.rotation.y=Math.PI;
-   const ring=mesh(new THREE.RingGeometry(.067,.092,48),this.capMaterial,card,[x,y,-.2995]);ring.rotation.y=Math.PI;this.micRims.push(ring);
-   // Fine acoustic mesh, aligned to the actual footprint's all-layer sound opening.
-   for(const [a,b]of [[-.022,0],[.022,0],[0,.022],[0,-.022]]){
-    const dot=mesh(new THREE.CircleGeometry(.006,8),new THREE.MeshBasicMaterial({color:0x667385}),card,[x+a,y+b,-.300]);dot.rotation.y=Math.PI;
-   }
-  });
-  const bc=document.createElement('canvas');bc.width=2048;bc.height=1536;const bx=bc.getContext('2d');bx.textAlign='center';bx.fillStyle='#484d55';bx.font=`400 44px ${brand}`;bx.letterSpacing='-1px';bx.fillText('Voloop',1024,1270);
-  const backLogo=mesh(new THREE.PlaneGeometry(10.22,7.62),new THREE.MeshBasicMaterial({map:texture(bc),transparent:true,depthWrite:false}),card,[0,0,-.299]);backLogo.rotation.y=Math.PI;
-  // Connector openings are on the correct edges, with their tangential coordinates from PCB1.
-  const usb=new THREE.Group();usb.position.set(5.153,PCB.usb.modelXY[1],-.025);usb.rotation.set(0,Math.PI/2,Math.PI/2);card.add(usb);
-  plane(rounded(.91,.29,.135),this.metal,usb,.003,.91,.29);plane(rounded(.82,.21,.10),this.black,usb,.007,.82,.21);
-  plane(rounded(.56,.033,.015),new THREE.MeshStandardMaterial({color:0x69768a,metalness:.8,roughness:.35}),usb,.011,.56,.033);
-  const sd=new THREE.Group();sd.position.set(PCB.sd.modelXY[0],-3.851,-.025);sd.rotation.x=Math.PI/2;card.add(sd);plane(rounded(1.28,.105,.04),this.black,sd,.003,1.28,.105);
-  // Front face and control caps remain independently addressable for the alignment view.
-  this.frontFaces=[decal];
+  }
  }
  buildBoard(){
-  const board=this.board=new THREE.Group();this.card.add(board);board.visible=false;
-  const shape=new THREE.Shape();PCB.board.outlineXY.forEach(([x,y],i)=>i?shape.lineTo(x,y):shape.moveTo(x,y));shape.closePath();
-  mesh(new THREE.ExtrudeGeometry(shape,{depth:.065,bevelEnabled:false}),new THREE.MeshStandardMaterial({color:0x122b2b,metalness:.3,roughness:.55}),board,[0,0,-.04]);
-  PCB.components.forEach(c=>{
-   const [x,y]=c.xy,ww=Math.max(.06,c.bboxMm.x/10),hh=Math.max(.05,c.bboxMm.y/10);
-   const isModule=c.designator==='U1',isSwitch=c.designator.startsWith('SW'),isConnector=c.designator==='J1'||c.designator==='J2';
-   const mat=new THREE.MeshStandardMaterial({color:isModule||isConnector?0x8793a1:isSwitch?0xbac4ce:0x28313a,metalness:isModule||isConnector?.8:.2,roughness:.36});
-   mesh(new THREE.BoxGeometry(ww,hh,isModule?.12:.035),mat,board,[x,y,.04]);
-  });
+  this.board=new THREE.Group();this.card.add(this.board);this.board.visible=false;
  }
  buildPhone(){
   const p=this.phone=new THREE.Group();this.scene.add(p);p.visible=false;
@@ -143,16 +114,11 @@ export class ProductStudio {
   plane(rounded(3.2,6.80,.30),new THREE.MeshBasicMaterial({map:this.screenTexture}),p,.157,3.2,6.8);
  }
  phoneUI(t){
-  const x=this.screenCanvas.getContext('2d');x.fillStyle='#111114';x.fillRect(0,0,700,1440);
-  const g=x.createRadialGradient(630,300,0,500,400,950);g.addColorStop(0,'#29292f');g.addColorStop(1,'#111114');x.fillStyle=g;x.fillRect(0,0,700,1440);
-  x.fillStyle='#bfc9d5';x.font=`24px ${sans}`;x.fillText('09:41',52,70);x.fillStyle='#050608';x.beginPath();x.roundRect(268,35,164,40,22);x.fill();
-  x.fillStyle='#a0a0a7';x.font=`400 34px ${brand}`;x.fillText('Voloop',52,210);x.fillStyle='#f5f5f7';x.font=`400 52px ${sans}`;x.fillText('记忆，开始有用。',50,305);
-  x.fillStyle='#93a5bb';x.font=`24px ${sans}`;x.fillText('来自 Voloop X1 的片段',52,360);
-  const cards=[{at:22,y:470,k:'灵感',s:'把灵感，留给下一次创造。',c:'#aac9e7'},
-   {at:23.25,y:740,k:'待办',s:'周五，把方案发给同事。',c:'#d4c8a8'},
-   {at:24.5,y:1010,k:'提醒',s:'周五 14:00，记得赴约。',c:'#a7c7b9'}];
-  for(const o of cards){let a=smooth((t-o.at)/.38);x.save();x.globalAlpha=a;x.translate(0,(1-a)*40);x.fillStyle='#28282e';x.beginPath();x.roundRect(36,o.y,628,218,24);x.fill();x.strokeStyle='#3b3b42';x.lineWidth=1;x.stroke();x.fillStyle=o.c;x.font=`24px ${sans}`;x.fillText(o.k,65,o.y+49);x.fillStyle='#e2eaf5';x.font=`28px ${sans}`;x.fillText(o.s,65,o.y+113);x.fillStyle='#8599af';x.font=`21px ${sans}`;x.fillText('整理自最近保存的录音',65,o.y+170);x.restore();}
-  x.textAlign='center';x.fillStyle='#7e91a9';x.font=`19px ${sans}`;x.fillText('手机 AI · 功能愿景',350,1350);x.fillStyle='#aeb9c7';x.beginPath();x.roundRect(252,1390,196,6,3);x.fill();x.textAlign='left';this.screenTexture.needsUpdate=true;
+  const context=this.screenCanvas.getContext('2d');
+  const fade=smooth((t-23)/.5);
+  context.drawImage(appImages[0],0,0,700,1440);
+  context.save();context.globalAlpha=fade;context.drawImage(appImages[1],0,0,700,1440);context.restore();
+  this.screenTexture.needsUpdate=true;
  }
  configure(shot,t){
   const diagnostic=shot==='alignment',pose=sampleMotion(t);
@@ -175,13 +141,13 @@ export class ProductStudio {
   const macro=ease((t-10.05)/.8)*(1-ease((t-14.1)/1.15));
   const edge=ease((t-26.3)/1.45)*(1-ease((t-28.25)/1.2));
   this.key.position.set(lerp(-6+Math.sin(t*.55)*5,1,macro),lerp(7,6,macro),10);
-  this.key.intensity=2.8+.45*macro;
+  this.key.intensity=1.5+.3*macro;
   this.strip.position.set(lerp(-7+Math.sin(t*.7)*4,-10+(t-27)*6,edge),-5+edge*2,4-edge);
-  this.strip.intensity=2.0+1.2*edge;this.rim.intensity=2.4;this.scene.environmentIntensity=.95+.10*macro;this.scene.environmentRotation.y=.10*Math.sin(t*.22);
+  this.strip.intensity=1.1+.65*edge;this.rim.intensity=1.3;this.scene.environmentIntensity=.55+.07*macro;this.scene.environmentRotation.y=.10*Math.sin(t*.22);
  }
  render(shot,t){this.configure(shot,t);this.renderer.render(this.scene,this.camera);return this.renderer.domElement;}
- point(x,y,z=.3,obj=this.card){const v=new THREE.Vector3(x,y,z);obj.localToWorld(v);v.project(this.camera);return [(v.x+1)*960,(1-v.y)*540];}
- buttonPoint(i=1){return this.point(...PCB.buttons[i].modelXY,.30);}
- micPoint(i){return this.point(...PCB.microphones[i].modelXY,-.301);}
+ point(x,y,z=.49,obj=this.card){const v=new THREE.Vector3(x,y,z);obj.localToWorld(v);v.project(this.camera);return [(v.x+1)*960,(1-v.y)*540];}
+ buttonPoint(i=1){return this.point(...PCB.buttons[i].modelXY,.525);}
+ micPoint(i){return this.point(...PCB.microphones[i].modelXY,-.49);}
  phonePoint(x=0,y=0){return this.point(x,y,.16,this.phone);}
 }

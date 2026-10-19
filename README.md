@@ -4,7 +4,7 @@
 
 语环 X1 是一款录音卡原型：持续保留最近 24 小时的录音，按键回溯保存已经发生的对话，再同步到 Android 手机。本仓库汇集硬件、ESP32-S3 固件、Android App、可打印外壳与产品演示工程。
 
-[快速开始](#快速开始) · [下载文件](outputs/README.md) · [当前进度](docs/PROJECT_STATUS.md) · [参与修改](CONTRIBUTING.md)
+[快速开始](#快速开始) · [HTML 汇报](outputs/yuhuan-x1-report/语环X1-产品研发汇报.html) · [下载文件](outputs/README.md) · [当前进度](docs/PROJECT_STATUS.md) · [参与修改](CONTRIBUTING.md)
 
 ![R03 外壳预览](enclosure/r03/preview/00-overview.png)
 
@@ -52,7 +52,7 @@ SDK、工具链、模拟器、下载缓存与本机配置不入库。各模块�
 
 当前固件与 App 对应**独立四麦时钟 / 数据、双按键** PCB。硬件审查目录保留改线前后的记录，使用时以[改线说明](hardware/reviews/语环X1-本次改线说明.md)和原生工程为准。
 
-影片使用 Voloop X1 英文字标，包含 6 mm 外观目标和 AI 功能愿景。实际打印结构以 R03 CAD 为准，已实现的软件功能以模块 README 为准。历史 ZIP 是原交付快照；继续开发使用分类后的源码目录。
+当前影片、HTML 汇报与打印结构统一使用 R03：主体 9.80 mm，含按键最高 10.15 mm，保留铝塑分区与外露圆头榫接。影片使用当前 Android Demo 截图，AI 整理与提醒仍为功能规划。历史视频与 ZIP 保留原交付快照；继续开发使用分类后的源码目录。
 
 ## 使用与第三方许可
 

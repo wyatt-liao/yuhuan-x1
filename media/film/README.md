@@ -1,99 +1,78 @@
-# Voloop X1 · 重要的，回头还在。
+# 语环 X1 · R03 统一版影片
 
 ![影片封面](assets/poster.jpg)
 
-35 秒代码产品概念短片，1920×1080、30fps、16:9。用快切痛点字卡、倒流波形、按键微距和手机整理场景，呈现“错过录音 → 回溯保存 → 信息成为下一步”的主线。采用系统无衬线正文、Avenir Next 英文字标与收紧字距，结合留白、黑白字卡和金属反光。移除 HUD 标线、光环、粒子、技术计时器和装饰性坐标。机身正面与背面均渲染 Voloop 英文字标。音乐与按键音由代码合成，无外部音乐采样。
+35 秒产品演示片，1920×1080、30 fps、16:9。当前影片、实时预览、HTML 汇报与结构方案统一采用 **R03 CAD 同源模型**，产品名称统一为 **语环 X1**。
+
+- 主体 **110.80 × 84.84 × 9.80 mm**，含按键最高 **10.15 mm**。
+- 模型包含实际外露圆头榫接、铝塑分区、螺丝、按键、接口和声孔。
+- 手机镜头使用当前 Android Demo 的真实模拟器截图。截图中的短音频为测试数据。
+- 手机 AI 整理、待办与提醒仍为功能规划；24h 为循环录音保留窗口，续航待实测。
+
+当前为结构渲染和软件 Demo，尚未完成实板上电、样壳装配或真实无线链路验证。首件全部用树脂打印，画面中的铝质表现用于说明后续材质意向。
 
 ## 播放
 
-直接播放交付的 `Voloop-X1-CG版-运镜修正.mp4`。实时预览在本目录运行：
+优先播放 [R03 统一版 MP4](../../outputs/语环X1-R03统一版.mp4)。本地播放器：
 
 ```sh
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-浏览器打开 `http://127.0.0.1:8765/` 查看 Blender 成片；`http://127.0.0.1:8765/?live=1` 查看 Three.js 编排预览。成片使用浏览器原生播放、音量及进度控制；空格暂停或继续，方向键切换段落，F 全屏。初始暂停封面为最终产品镜头。所有模型、依赖和配乐在本地，使用本机系统字体；不需要账号或 API 密钥。
+浏览器访问 `http://127.0.0.1:8765/` 播放成片；加 `?live=1` 查看 Three.js 实时预览。空格暂停或继续，左右方向键跳段，F 全屏。图片、模型、配乐和依赖均在本地。
+
+ZIP 解压后也可直接打开 `cinema.html` 播放成片。实时预览和重渲染需要通过上面的本地服务加载模块。
 
 ## 分镜
 
 | 时间 | 画面与信息 |
 |---|---|
-| 00–05 | 时间、灵感、对话一闪而过；没按录音就错过 |
-| 05–08 | “往回。保存。”与倒流波形，机身亮相 |
-| 08–10.5 | 24H 循环记录保留窗口 |
-| 10.5–17 | 真实位置的回溯键；按一次保存前 1 小时，连按 N 次保存前 N 小时 |
-| 17–21 | 第二个痛点：录下来，仍需一段段重听 |
-| 21–27 | 手机同步、整理想法、提取待办、生成提醒；标注功能愿景 |
-| 27–29 | 6 mm 外观设计目标与纯净侧面镜头 |
-| 29–31 | 静时一麦、人声四麦，背面声孔响应示意 |
-| 31–35 | Voloop X1；重要的，回头还在 |
+| 00–05 | 灵感、对话与约定，没按录音就错过 |
+| 05–08 | 回溯保存与 R03 机身亮相 |
+| 08–10.5 | 24h 循环录音保留窗口 |
+| 10.5–17 | 双按键微距；按一次保存前 1 小时，连按 N 次保存前 N 小时 |
+| 17–21 | 保存之后仍需重听的使用场景 |
+| 21–27 | 当前 Android Demo 界面；AI 整理与提醒的后续规划 |
+| 27–29 | 9.80 mm 主体侧面，含按键最高 10.15 mm |
+| 29–31 | 静时一麦、人声四麦工作模式示意 |
+| 31–35 | 语环 X1 与 R03 机身收尾 |
 
-## 连续运镜与 CG 渲染
+## CAD 同源关系
 
-成片模型使用 Blender EEVEE Next、PBR 金属材质、面光源、柔和阴影及真实倒角几何渲染。另附一张 Cycles 32 采样路径追踪试渲染图供材质参考；整部动画的渲染器为 EEVEE Next。Three.js 版本用于快速编排和交互预览，材质表现与 Blender 成片不同。
+`assets/r03-assembly.json` 是当前 R03 预览使用的同一套 CAD 三角网格，包含壳体、按键和内部装配参考。来源为 `enclosure/r03/source/build_print_r03.py`，未对几何进行减薄或美化重画。
 
-`motion.js` 定义一条覆盖 0–35 秒的全局轨迹。位置、比例、镜头位置、注视点和焦距使用五次 Hermite 曲线，关键点共享速度和加速度；旋转角保持连续累积。文字分镜不会重置模型与相机。轨迹按 30fps 烘焙到 Blender 文件，微距拉近、拉远、手机交接、侧面、背面和正面收尾连续衔接。灯光扫动与按键行程也随全局时间变化。9.05–10.85 秒以 1.8 秒完成推近，相机上方向固定为世界坐标 +Y；使用显式 right/up/back 基向量，避免俯视附近的 180° 翻转。`verification/motion-check.json` 检查了关键点连续性、2101 个采样点和任意顺序定位；`verification/camera-check.json` 检查完整相机朝向与烘焙位置。
+影片统一坐标：`x=(CAD x−49.9999)/10`、`y=(CAD y−37.0205)/10`、`z=(CAD z−4.9)/10`，1 单位为 10 mm。两按键中心距 8.89 mm。实际开孔和接头直接来自网格。
 
-`assets/Voloop-X1-CG.blend` 包含动画、灯光、材质、转为网格的 Voloop 字标，以及打包的手机界面纹理，无需外部字体文件。模型仍为视觉概念，不能代替结构 CAD。
+`verification/r03-scene-check.json` 验证了全部网格坐标、主体尺寸、两键间距、连续相机朝向与打包贴图。`r03-media-check.json` 与 `r03-player-check.json` 记录当前成片和播放入口检查。旧的 PCB 对齐和连续运镜报告保留作历史依据，当前外观以 R03 检查为准。
 
-重新渲染 Blender 场景可以使用：
+## 模型与渲染
 
-```sh
-blender -b assets/Voloop-X1-CG.blend -o /absolute/path/cg/frame-#### -s 1 -e 1050 -a
-node tools/render.mjs --cg-dir /absolute/path/cg --cg-start 1 --cg-fps 30 --fps 30 --out ../Voloop-X1-CG版-运镜修正.mp4
-```
+- `assets/Yuhuan-X1-R03-CG.blend`：当前成片场景，包含 1050 帧连续运镜、真实 R03 网格、灯光与已打包的 App 截图。
+- `product.js`：Three.js 预览，加载同一份 `r03-assembly.json` 与 Android 截图。
+- `motion.js`：覆盖整部影片的连续运动轨迹；字幕切换不会重置模型或相机。
+- `film.js`：字幕、波形及画面合成；`window.film.render(seconds)` 可定位任意帧。
+- `tools/render_r03_frames.py`：逐帧渲染 Blender 场景。
+- `tools/render.mjs`：隔离浏览器合成字幕、配乐与 H.264 MP4。
+- `tools/check_scene.py`：CAD 网格及相机检查。
 
-若需完整路径追踪动画，可在 Blender 中切换到 Cycles，或命令行加入 `-E CYCLES`。渲染时间会增加。原始按帧 PNG 不放入源码压缩包；可从 Blender 文件重新生成。
+成片使用 Blender EEVEE Next、32 采样，保留原有连续运镜。模型文件不依赖外部字体。手机截图是当前 Demo，不显示虚构的已完成 AI 结果。
 
-## PCB 对齐依据
-
-2026-10-18 对 EasyEDA 工程 `MeetCard-AI-repair-loop-20261018` 的 PCB1 进行只读回读。对比已有最终快照的 51 个元件，元件 ID、坐标、旋转及层面保持一致。本次只修改影片模型。
-
-- PCB 在片中顺时针旋转 90°，板边约 100 × 74.041 mm；概念外壳约 103 × 77 × 6 mm。
-- SW1、SW2 使用实际焊盘中心，正面按压，中心距 8.89 mm；REC 与 SAVE 图形分别对应录音和回溯键。
-- USB 使用 J1 的边缘方向及切向坐标，TF 使用 J2 的边缘方向及切向坐标。外壳开口向外延伸属于概念结构。
-- 四个背面声孔使用 MIC1–MIC4 原生封装的声孔偏移中心；底部进声的示意面与按键面相反。
-- `product-data.js` 包含坐标变换、所有元件位置、板边和孔口数据。`verification/pcb-alignment.json` 包含来源、对齐结果及边界说明。
-
-6 mm 是用户指定的设计目标。影片模型的 Z 包络约为 −0.3 至 +0.3 个模型单位（1 单位 = 10 mm）；未核验电池、PCB、连接器、壳体和装配公差的实际厚度堆叠。该模型用于视觉展示，不可作为开模或制造文件。
-
-## 修改与导出
-
-- `film.js`：确定性分镜、文字、波形、标注与画面合成；`window.film.render(seconds)` 可定位任意帧。
-- `product.js`：Three.js 编排预览的模型与灯光。
-- `motion.js`：全局非线性运镜轨迹；`tools/export_motion.mjs` 可导出 Blender 使用的逐帧坐标。
-- `product-data.js`：PCB 衍生坐标数据；影片源码与 PCB 工程独立。
-- `cinema.html`、`cinema.js`：Blender 成片播放器；`player.js`、`index.html?live=1`：编排预览。
-- `tools/make_score.py`：35 秒、120 BPM 原创合成配乐；需要 NumPy。
-- `tools/render.mjs`：隔离浏览器逐帧合成 MP4；使用 `--cg-dir` 时默认 35 秒、30fps、1050 帧；未指定时为 Three.js 60fps 预览导出。
-- `vendor/`：Three.js 0.180.0 原版压缩库及 MIT 许可。
-
-重新导出需要 Node.js、FFmpeg、Playwright 和支持 WebGL 的 Chromium。普通浏览器播放无需 npm 安装。`node tools/check_motion.mjs` 可重新检查运动轨迹；`blender -b assets/Voloop-X1-CG.blend --python tools/check_scene.py` 可检查烘焙后相机是否翻转。
+从本目录重渲染：
 
 ```sh
-npm install
-npx playwright install chromium
-npm run render -- --cg-dir /absolute/path/cg --cg-start 1 --out ../Voloop-X1-CG版-运镜修正.mp4
+blender -b assets/Yuhuan-X1-R03-CG.blend --python tools/render_r03_frames.py -- /absolute/path/cg
+node tools/render.mjs --chrome '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --cg-dir /absolute/path/cg --cg-start 1 --cg-fps 30 --fps 30 --out ../../outputs/语环X1-R03统一版.mp4
+blender -b assets/Yuhuan-X1-R03-CG.blend --python tools/check_scene.py
 ```
 
-macOS 可使用已安装的 Chrome：
+Node 侧需要 Playwright，导出需要 FFmpeg。可用 `X1_NODE_MODULES` 指向统一依赖目录，`FFMPEG_PATH` 指定 FFmpeg。普通播放无需安装 npm 包。渲染帧保存在临时目录，不进入源码仓库。
 
-```sh
-npm run render -- --chrome '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --cg-dir /absolute/path/cg --cg-start 1 --out ../Voloop-X1-CG版-运镜修正.mp4
-```
+## 更新模型
 
-`--seconds 3` 可检查前三秒；CG 合成默认 30fps。导出同时生成封面和 `render-report.json`。GPU 与系统字体不同会造成轻微渲染差异。依赖位于统一目录时，可设 `X1_NODE_MODULES`；FFmpeg 不在 PATH 时可设 `FFMPEG_PATH`。
+重新从 R03 构建脚本输出 CAD 预览网格后，替换 `assets/r03-assembly.json`，再运行 `blender -b assets/Voloop-X1-CG.blend --python tools/update_r03_scene.py --`。脚本自动定位本工程目录，复用历史场景的运镜和灯光，替换模型与手机贴图。历史 `assets/Voloop-X1-CG.blend` 保留作运镜模板，当前播放与交付不使用其中的旧概念壳。
 
-重建配乐：
+## 历史与许可
 
-```sh
-python3 -m pip install numpy
-python3 tools/make_score.py score.wav
-ffmpeg -y -i score.wav -af loudnorm=I=-16:TP=-1.5:LRA=7 -ar 48000 -c:a aac -b:a 192k assets/score.m4a
-```
+旧版 Voloop / 6 mm 概念影片保留在 [历史下载](../../outputs/README.md#产品影片)，不代表当前制造结构。当前参数以 R03 为准，已实现功能以固件和 Android 文档为准。
 
-## 产品口径与许可
-
-24H 指循环录音保留窗口，不是实测电池续航。手机 AI、待办、提醒及界面属于后续功能愿景，一麦与四麦为工作模式示意，不构成声学校准或量产验证。外观为工业设计概念，材质、工艺和真实装配尺寸尚待结构验证。
-
-本次新写的影片和音乐源码可供本产品修改、使用和宣传。未使用苹果、索尼标识、广告素材或音乐。Three.js 保留 MIT 许可，见 `vendor/THREE-LICENSE.txt`。
+音乐与按键音由项目代码合成，没有外部音乐采样；`vendor/` 保留 Three.js MIT 许可。未使用其他品牌标识、广告片或音乐。
