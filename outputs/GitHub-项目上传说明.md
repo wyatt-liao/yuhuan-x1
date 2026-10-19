@@ -2,7 +2,7 @@
 
 仓库：https://github.com/wyatt-liao/yuhuan-x1
 
-可见性：公开。主分支：`main`。整理日期：2026-10-19（Asia/Shanghai）。
+可见性：当前仍为私有，已发起公开切换，等待仓库所有者完成 GitHub 二次身份验证。主分支：`main`。整理日期：2026-10-19（Asia/Shanghai）。
 
 包括当前目录的语环 X1 项目交付：EasyEDA 原生 PCB、审查与改线证据、固件源码和编译产物、Android 工程与 APK、R01/R02/R03 外壳 CAD/打印件/预览，以及产品影片与源文件。
 
