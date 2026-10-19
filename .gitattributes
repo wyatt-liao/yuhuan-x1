@@ -1,0 +1,27 @@
+# Keep generated exports and vendor sources out of the project's language breakdown.
+outputs/** linguist-generated=true
+**/release/** linguist-generated=true
+**/verification/** linguist-generated=true
+enclosure/**/preview/** linguist-generated=true
+enclosure/**/reference/** linguist-generated=true
+enclosure/**/step/** linguist-generated=true
+enclosure/**/step_optional/** linguist-generated=true
+enclosure/**/stl/** linguist-generated=true
+enclosure/**/stl_optional/** linguist-generated=true
+firmware/components/fvad/** linguist-vendored=true
+android/app/src/main/java/androidx/** linguist-vendored=true
+android/design-reference/** linguist-generated=true
+media/film/vendor/** linguist-vendored=true
+
+*.epro2 binary
+*.stl binary
+*.step binary
+*.blend binary
+*.apk binary
+*.zip binary
+*.mp4 binary
+*.m4a binary
+*.wav binary
+*.pcm binary
+*.bin binary
+*.jar binary

@@ -110,4 +110,4 @@ MIC1–4 为 IM69D130 PDM 麦克风。两两共用数据线，并分别选择相
 
 项目 UUID：`6e7fb6759eab460cbbc49ac9e7796a0d`；PCB UUID：`c513f79d0042e6d9`。起止设计语义 SHA-256：`bbdfc90a5b9f2a4929e4e067c2c2222ed41e1369b130a65f3c53ebfcda5300c0`。
 
-![PCB1 现场读取截图](/Users/wyatt/Documents/Codex/2026-10-18/easyeda-edaagent-15/outputs/PCB1-现场截图.png)
+![PCB1 现场读取截图](PCB1-现场截图.png)

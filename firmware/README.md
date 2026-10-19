@@ -60,7 +60,7 @@ python -m esptool --chip esp32s3 --port PORT --baud 460800 write_flash --flash_m
 
 ## 手机作为本地后端
 
-固件提供 BLE 与局域网 HTTP。配套 Android Demo 已放在相邻的 `yuhuan-x1-android/` 工程，具体接入能力与测试边界见其 README；`tools/phone_demo.py` 仍可在电脑运行，作为“手机后端模拟器”完成接收、续传、落盘和 ACK，没有外部服务器、云账号或 AI 接口。
+固件提供 BLE 与局域网 HTTP。配套 [Android Demo](../android/README.md) 位于 `../android/`，具体接入能力与测试边界见其 README；`tools/phone_demo.py` 仍可在电脑运行，作为“手机后端模拟器”完成接收、续传、落盘和 ACK，没有外部服务器、云账号或 AI 接口。
 
 安装 Python 3.9+；BLE 路径另需 `pip install bleak`。默认连接后立即同步所有仍在设备上的片段，包括旧的保护录音；`--watch` 在此程序运行期间每 30s 重新连接同步。接入正式 App 时复用同一协议，让 App 在连接事件触发同步即可。
 
